@@ -1,0 +1,305 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trang chủ</title>
+    <!-- Style CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <script src="js/jquery-1.10.2.js"></script>
+</head>
+<body class="home">
+    <div class="menu-bar-mobile" tabindex="-1">
+        <div class="logo-menu">
+            <a href="index.html"><img class="transition" src="images/logo.png"></a>
+        </div>
+        <div class="menu-bar-lv-1">
+            <a class="a-lv-1" href="index.html">Home</a>
+        </div>
+        <div class="menu-bar-lv-1">
+            <a href="gioi-thieu.html">GIỚI THIỆU</a>
+        </div>
+        <div class="menu-bar-lv-1">
+            <a href="speaker.html">DIỄN GIẢ</a>
+        </div>
+         <div class="menu-bar-lv-1">
+            <a class="a-lv-1" href="programe.html">CHƯƠNG TRÌNH</a>
+        </div>
+        <div class="menu-bar-lv-1">
+            <a class="a-lv-1" href="list-news.html">Tin tức</a>
+        </div>
+        <div class="menu-bar-lv-1">
+            <a class="a-lv-1" href="login.html">ĐĂNG KÝ</a>
+        </div>
+    </div>
+    <div class="shadow-open-menu"></div>
+    <div class="menu-btn-show">
+        <span class="border-style"></span>
+        <span class="border-style"></span>
+        <span class="border-style"></span>
+    </div>
+    <div class="header-page">
+        <div class="top-header-page">
+            <div class="container">
+                <div class="left-top-header">
+                    <p><b>Hội Hô Hấp Việt Nam - Viet Nam Respiratory Society</b></p>
+                </div>
+                <div class="right-top-header">
+                    <div class="btn-regisnation">
+                        <a href="login.html">Registration</a>
+                    </div>
+                    <div class="box-search">
+                        <input type="text" placeholder="">
+                        <button class="btn-search"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-header">
+            <div class="container">
+                <div class="logo  wow fadeInDown">
+                    <a href="index.html">
+                        <img src="images/logo.png">
+                    </a>
+                </div>
+                <div class="main-menu">
+                    <ul>
+                        <li class="active"><a href="index.html">TRANG CHỦ</a></li>
+                        <li>
+                            <a href="gioi-thieu.html">GIỚI THIỆU</a>
+                        </li>
+                        <li>
+                            <a href="programe.html">CHƯƠNG TRÌNH</a>
+                        </li>
+                        <li>
+                            <a href="speaker.html">DIỄN GIẢ</a>
+                        </li>
+                        <li>
+                            <a href="list-news.html">Tin tức</a>
+                        </li>
+                        <li>
+                            <a href="dangkythamdu.html">ĐĂNG KÝ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-wrap">
+        <div class="breadcrumb">
+            <div class="container">
+                <a href="">Trang chủ</a>
+                <span>/</span>
+                <p>
+                    Đăng nhập
+                </p>
+            </div>
+        </div>
+        <div class="banner-page-list" style="background-image: url(images/banner-inpage.jpg);">
+        </div>
+        <div class="hr-30"></div>
+        <div class="page-programme">
+            <div class="container">
+                <div class="title-page">
+                    <h2>
+                        Đăng nhập
+                    </h2>
+                </div>
+                <div class="hr-25"></div>
+                <div class="sign-inpage">
+                    <div class="section sign-up-content clerafix">
+                        <script type="text/javascript">
+                            $(document).ready(function() {
+                                $('.__MB_BUTTON_ACTION').click(function() {
+                                    login_page($(this));
+                                    return false;
+                                });
+
+                                $('#__MB_LOGIN_PAGE input').click(function() {
+                                    $('.__MB_SIGNIN_BOX_ALERT').hide();
+                                });
+
+                            });
+                        </script>
+                        <form name="__MB_LOGIN_PAGE" id="__MB_LOGIN_PAGE" data-toggle="validator" role="form" novalidate="true">
+
+                            <div class="box-stage clearfix">
+                                <p><strong>Đăng nhập</strong></p>
+                                <div class="form-group r-field has-feedback">
+                                    <div class="control-label r-field-name text-left">Tên(<span class="required">*</span>):</div>
+                                    <div class="r-field-input">
+                                        <input type="text" name="username" class="form-control" placeholder="Username" data-error="User name is required" required="">
+                                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group r-field has-feedback">
+                                    <div class="control-label r-field-name text-left">Mật khẩu (<span class="required">*</span>):</div>
+                                    <div class="r-field-input">
+                                        <input type="password" name="password" class="form-control" placeholder="Password" data-error="Password is required" required="">
+                                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="r-field">
+                                    <div class="alert alert-danger __MB_SIGNIN_BOX_ALERT" role="alert" style="display:none;">
+                                        <strong>Oh snap!</strong>
+                                        <span id="__MB_MSG_TXT">Wrong username or password! Please try again!</span>
+                                    </div>
+                                </div>
+
+                                <div class="r-field">
+                                    <div class="r-field-name text-left">
+
+                                    </div>
+                                    <div class="r-field-input">
+                                        <a class="forgot-your-password" href="forgot-pass.html">Quên mật khẩu?</a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="box-btn-next text-center clearfix" style="margin-top: 10px;">
+                                <button type="submit" href="#" class="btn btn-next-step __MB_BUTTON_ACTION">Đăng nhập</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="hr-30"></div>
+            </div>
+        </div>
+    </div><!-- /content-wrap -->
+
+    <footer class="flw">
+        <div class="ht-footer flw">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <aside  class="widget widget_text">
+                            <h3 class="widget-title"><a href="introduce.html">Giới thiệu</a> </h3>
+                        </aside>
+                        <ul id="text-3">
+                            <li><a href="gioi-thieu.html" target="_self">Giới thiệu viện hô hấp Việt Nam</a></li> 
+                            <li><a href="" target="_self">Ban Tổ chức</a></li> 
+                            <li><a href="" target="_self">Liên hệ</a></li> 
+                            <li><a href="" target="_self">Địa điểm tổ chức</a></li>
+                            <li><a href="" target="_blank">Câu hỏi thường gặp</a></li> 
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <aside  class="widget widget_text">
+                            <h3 class="widget-title"><a href="list-news.html">Tin tức & album</a> </h3>
+                        </aside>
+                        <ul id="text-3">
+                            <li>
+                                <a href="">Tin tức</a>
+                            </li>
+                            <li>
+                                <a href="">Album</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <aside  class="widget widget_text">
+                            <h3 class="widget-title"><a href="">ĐƠN VỊ TÀI TRỢ</a> </h3>
+                        </aside>
+                        <ul id="text-3">
+                            <li>
+                                <a href="">Nhà tài trợ kim cương</a>
+                            </li>
+                            <li>
+                                <a href="">Nhà tài trợ vàng</a>
+                            </li>
+                            <li>
+                                <a href="">Nhà tài trợ bạc</a>
+                            </li>
+                            <li>
+                                <a href="">Nhà tài trợ đồng</a>
+                            </li>
+                            <li>
+                                <a href="">Đồng tài trợ</a>
+                            </li>
+                        </ul>
+                    </div>   
+
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <aside  class="widget widget_text">
+                            <h3 class="widget-title"><a href="programe.html">Liên hệ</a> </h3>
+                        </aside>
+                        <ul id="text-3">
+                            <li><a href="gioi-thieu.html" target="_self">Liên hệ</a></li> 
+                            <li><a href="gioi-thieu.html" target="_self">Đăng ký</a></li> 
+                        </ul>
+                    </div>                   
+                </div>
+                <hr>
+                <div class="location-store">
+                    <div class="infor-store">
+                        <h2>Hội Hô hấp Việt Nam</h2>
+                        <p>
+                            Địa chỉ: Phòng 1802, Tầng 18, Nhà Q, Bệnh viện Bạch Mai - Số 78 Giải phóng, Đống Đa, Hà Nội.
+                        </p>
+                        <p>
+                            Điện thoại: (84-4) 3629 1207; Di động: 0972.462.203
+                        </p>
+                        <p>
+                            Email: hoihohapvietnam@gmail.com
+                        </p>
+                    </div>
+                    <div class="social-icon">
+                        <a href="">
+                            <img src="images/icon-social1.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="images/icon-social2.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="images/icon-social3.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="images/icon-social4.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright flw ">
+            <div class="container">
+                <div class="left-copyright"> 
+                    <span>© The conference is managed with advanced Conference Management System (CMS) professionally by Hoabinh-group.com. All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Boostrap -->    
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script type="text/javascript" src="js/jquery.themepunch.plugins.min.js"></script>
+    <script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="js/jquery.sliderPro.min.js"></script>
+    <script type="text/javascript" src="js/nice-date-picker.js"></script>
+    <script type="text/javascript">
+        new WOW().init();
+        $(document).ready(function() {
+            $('.tp-banner').revolution({
+                delay:9000,
+                startwidth:1000,
+                startheight:340,
+                hideThumbs:10
+            });
+            if ($(window).width() < 560) {
+            };
+            
+        });
+    </script>
+    <!-- Main -->    
+    <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,157 @@
+.footer {
+  float: left;
+  width: 100%;
+  padding: 7rem 0 0 0;
+  color: #d8bd86;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  position: relative; }
+  .footer .bg-img {
+    position: absolute;
+    background: url(../images/bg-vector.png) #00a021;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; }
+  .footer .container {
+    position: relative; }
+  .footer .left-footer {
+    float: left;
+    width: 50rem; }
+    @media (max-width: 1200px) {
+      .footer .left-footer {
+        width: 320px; } }
+    @media (max-width: 991px) {
+      .footer .left-footer {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px; } }
+    .footer .left-footer .logo-footer {
+      top: 0;
+      width: 100%;
+      z-index: 99;
+      bottom: 0;
+      margin: auto;
+      float: left; }
+      .footer .left-footer .logo-footer .img {
+        margin-bottom: 25px; }
+      .footer .left-footer .logo-footer .hotline {
+        float: left;
+        width: 100%;
+        color: #ffffff;
+        font-size: 3.5rem;
+        font-weight: 700; }
+        @media (max-width: 1200px) {
+          .footer .left-footer .logo-footer .hotline {
+            font-size: 30px; } }
+        .footer .left-footer .logo-footer .hotline a {
+          color: #fff; }
+  .footer .right-footer {
+    float: left;
+    width: Calc(100% - 50rem); }
+    @media (max-width: 1200px) {
+      .footer .right-footer {
+        width: Calc(100% - 320px); } }
+    @media (max-width: 991px) {
+      .footer .right-footer {
+        width: 100%;
+        text-align: center; } }
+  .footer .list-social {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 5rem;
+    border-top: 1px solid #ffffff5c;
+    padding-top: 20px;
+    position: relative; }
+    .footer .list-social ul {
+      list-style: none;
+      padding: 0;
+      margin: 0; }
+      .footer .list-social ul li {
+        display: inline-block;
+        margin: 0px 5px; }
+        .footer .list-social ul li a {
+          font-size: 18px;
+          color: #00a021;
+          background: #fff;
+          border-radius: 50px;
+          height: 34px;
+          width: 34px;
+          display: inline-block;
+          text-align: center;
+          line-height: 38px; }
+          .footer .list-social ul li a:hover {
+            background: #333;
+            color: #fff; }
+  .footer .menu-footer {
+    float: left; }
+    @media (max-width: 991px) {
+      .footer .menu-footer {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px; } }
+    .footer .menu-footer h2 {
+      text-transform: uppercase;
+      margin: 0px 0px 40px 0;
+      white-space: nowrap;
+      color: #ffffff;
+      font-size: 23px;
+      font-weight: 700;
+      position: relative; }
+      @media (max-width: 991px) {
+        .footer .menu-footer h2 {
+          margin: 10px 0px 30px 0;
+          font-size: 22px;
+          letter-spacing: .5px; } }
+      .footer .menu-footer h2:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -12px;
+        width: 30px;
+        height: 2px;
+        background: #fff; }
+        @media (max-width: 991px) {
+          .footer .menu-footer h2:after {
+            right: 0;
+            margin: auto; } }
+      .footer .menu-footer h2 a {
+        color: #ffffff; }
+    .footer .menu-footer ul {
+      padding: 0;
+      margin: 0;
+      float: left;
+      width: 100%;
+      list-style: none; }
+      .footer .menu-footer ul li {
+        float: left;
+        width: 100%;
+        margin-bottom: 7px; }
+        .footer .menu-footer ul li:last-child {
+          margin-bottom: 0;
+          padding-bottom: 0;
+          border-bottom: none; }
+        .footer .menu-footer ul li a {
+          color: #ffffff;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 27px;
+          white-space: nowrap; }
+          .footer .menu-footer ul li a:hover {
+            text-decoration: underline; }
+        .footer .menu-footer ul li:first-child a {
+          padding-left: 0; }
+
+.copy-right {
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px; }
+  .copy-right p {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400; }
+
+/*# sourceMappingURL=footer.css.map */

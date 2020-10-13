@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Trang chủ</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="css/vensdor/bootstrap.css" rel="stylesheet" />
+<link href="css/vensdor/font-awesome.css" rel="stylesheet" />
+<link href="css/vensdor/animate.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/vensdor/slick.css"/>
+<link rel="stylesheet" href="css/vensdor/jquery.fancybox.min.css" />
+<link href="css/style.css" rel="stylesheet" />
+
+<!-- Modernizr -->
+<script src="js/jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="full-width">
+		<div class="margin-center">
+			<div class="email-template">
+				<div class="line-top"></div>
+				<div class="bg-email">
+					<img src="images/bg-logo.png" alt="">
+				</div>
+				<div class="logo-email">
+					<a href="">
+						<img src="images/logo.png" alt="">
+					</a>
+				</div>
+				<div class="content-email">
+					<h2>
+						Dear <span>Thanh Pro</span>
+					</h2>
+					<p>
+						<b>
+							Chúng tôi vui mừng thông báo tới Quý vị là hồ sơ đăng ký tham dự Hội nghị thượng đỉnh kinh doanh Việt Nam đã được duyệt và Quý vị đã trở thành Đại biểu chính thức của Hội nghị!
+						</b>
+					</p>
+					<p>
+						Để xác nhận Quý vị chắc chắn sẽ tham dự Hội nghị, xin mời click vào link sau: <a href="">http://vietnambusinesssummit2017.com.vn/link-xac-nhan-dai-bietu-tham-du</a>
+					</p>
+					<p>
+						Để theo dõi thông tin về việc cấp thẻ Đại biểu và các thông tin mới nhất của Hội nghị, mời Quý vị tham khảo trên trang web của Hội nghị là <a href="">http://vietnambusinesssummit2017.com.vn/</a>
+					</p>
+					<br>
+					<div class="dot"></div>
+					<p>
+						Nếu cần thêm bất kỳ thông tin gì về Hội nghị, Quý vị hãy liên lạc với chúng thôi theo 
+					</p>
+					<p>
+						email: <a href="">contact@vietnambusinesssummit2017.com.vn</a>
+					</p>
+					<div class="thanks">
+						<p>
+							<b>Trân trọng!</b>
+						</p>
+						<p>
+							<b>Vietnam Business Summit 2017 Organizer </b>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/wow.min.js" type="text/javascript"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/slick.js"></script>
+<script src="js/main.js" type="text/javascript"></script>
+
+<script>
+	$('.banner-slider-index').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		arrows:false,
+		infinite: true,
+		speed: 1500,
+		fade: true,
+		cssEase: 'linear'
+	});
+</script>
+<script>
+	$(document).ready(function(e){
+		wow = new WOW(
+	      {
+	        animateClass: 'animated',
+	        offset:       100,          // default
+            mobile:       false,
+	        callback:     function(box) {
+	          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+	        }
+	      }
+	    );
+	    wow.init();
+	});
+</script>
+</body>

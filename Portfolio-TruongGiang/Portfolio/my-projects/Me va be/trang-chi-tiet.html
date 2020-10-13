@@ -1,0 +1,775 @@
+<!-- link web mau
+https://oh-me-va-be.mysapo.net/ -->
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <title>Mẹ và bé</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.css">
+        <script src="js/1.11.3/jquery.min.js"></script>
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/slick-1.8.1/slick/slick.js"></script>
+        <link rel="stylesheet" type="text/css" href="bootstrap-3.4.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <script src="js/jquery.bxslider.min.js"></script>
+        <script>
+        $(document).ready(function(c) {
+
+            $('.panel-title > a').click(function() {
+                $(this).find('i').toggleClass('fa-plus fa-minus')
+                    .closest('panel').siblings('panel')
+                    .find('i')
+                    .removeClass('fa-minus').addClass('fa-plus');
+            });
+
+            $(".totop-bx").on('click', function(event) {
+
+                if (this.hash !== "") {
+                event.preventDefault();
+
+                var hash = this.hash;
+
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function(){
+
+                    window.location.hash = hash;
+                });
+                } 
+                });
+                // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+                $(window).scroll(function () {
+                if ($(this).scrollTop() > 50) {
+                    $('.totop a').fadeIn();
+                } else {
+                    $('.totop a').fadeOut();
+                }
+                });
+
+            $('.bxslider').bxSlider({
+                    auto:true,
+                    mode:'fade',
+                    minSlides:1,
+                    maxSlides:1,
+                    moveSlides:1,
+                    speed:1000,
+                    pause:3000,
+                    pager:true,
+                    controls:false,
+                    infiniteLoop:true
+                });
+
+                $('.same-type-slide').bxSlider({
+                    auto:false,
+                    minSlides:4,
+                    maxSlides:4,
+                    slideWidth:288,
+                    moveSlides:1,
+                    speed:1000,
+                    pause:3000,
+                    pager:false,
+                    controls:false,
+                    infiniteLoop:true
+                });
+
+            $('.slide-pro-G').bxSlider({
+                auto:false,
+                // mode:'fade',
+                slideWidth:196,
+                minSlides:5,
+                maxSlides:5,
+                moveSlides:1,
+                speed:300,
+                pause:3000,
+                pager:true,
+                infiniteLoop:false,
+                wrapperClass:'bx-wrapper',
+                hideControlOnEnd:true
+                });
+
+            $('.accessories').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                // autoplay: true,
+                autoplaySpeed: 2000,
+                });
+            
+
+            $('.alert-close').on('click', function(c){
+                $('.message').fadeOut('slow', function(c){
+                      $('.message').remove();
+                });
+            });	  
+
+            $('.alert-close1').on('click', function(c){
+                $('.message1').fadeOut('slow', function(c){
+                      $('.message1').remove();
+                });
+            });	 
+            
+            $('.alert-close2').on('click', function(c){
+                $('.message2').fadeOut('slow', function(c){
+                      $('.message2').remove();
+                });
+            });	  
+            
+        });
+        </script>
+        <script>
+            function increaseValue() {
+                var value = parseInt(document.getElementById('number').value, 10);
+                value = isNaN(value) ? 0 : value;
+                value++;
+                document.getElementById('number').value = value;
+                }
+
+                function decreaseValue() {
+                var value = parseInt(document.getElementById('number').value, 10);
+                value = isNaN(value) ? 0 : value;
+                value < 1 ? value = 1 : '';
+                value--;
+                document.getElementById('number').value = value;
+                }
+        </script>
+        <!-- zoom pic  -->
+        <script>
+            function imageZoom(imgID, resultID) {
+              var img, lens, result, cx, cy;
+              img = document.getElementById(imgID);
+              result = document.getElementById(resultID);
+              /*create lens:*/
+              lens = document.createElement("DIV");
+              lens.setAttribute("class", "img-zoom-lens");
+              /*insert lens:*/
+              img.parentElement.insertBefore(lens, img);
+              /*calculate the ratio between result DIV and lens:*/
+              cx = result.offsetWidth / lens.offsetWidth;
+              cy = result.offsetHeight / lens.offsetHeight;
+              /*set background properties for the result DIV:*/
+              result.style.backgroundImage = "url('" + img.src + "')";
+              result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+              /*execute a function when someone moves the cursor over the image, or the lens:*/
+              lens.addEventListener("mousemove", moveLens);
+              img.addEventListener("mousemove", moveLens);
+              /*and also for touch screens:*/
+              lens.addEventListener("touchmove", moveLens);
+              img.addEventListener("touchmove", moveLens);
+              function moveLens(e) {
+                var pos, x, y;
+                /*prevent any other actions that may occur when moving over the image:*/
+                e.preventDefault();
+                /*get the cursor's x and y positions:*/
+                pos = getCursorPos(e);
+                /*calculate the position of the lens:*/
+                x = pos.x - (lens.offsetWidth / 2);
+                y = pos.y - (lens.offsetHeight / 2);
+                /*prevent the lens from being positioned outside the image:*/
+                if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
+                if (x < 0) {x = 0;}
+                if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
+                if (y < 0) {y = 0;}
+                /*set the position of the lens:*/
+                lens.style.left = x + "px";
+                lens.style.top = y + "px";
+                /*display what the lens "sees":*/
+                result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+              }
+              function getCursorPos(e) {
+                var a, x = 0, y = 0;
+                e = e || window.event;
+                /*get the x and y positions of the image:*/
+                a = img.getBoundingClientRect();
+                /*calculate the cursor's x and y coordinates, relative to the image:*/
+                x = e.pageX - a.left;
+                y = e.pageY - a.top;
+                /*consider any page scrolling:*/
+                x = x - window.pageXOffset;
+                y = y - window.pageYOffset;
+                return {x : x, y : y};
+              }
+            }
+            </script>
+            <!-- zoom pic  -->
+    </head>
+    <body>
+        <div id="wrap">
+            <header> 
+                <div class="container">
+                    <div class="row">
+                        <nav class="navbar navbar-default nav-G">
+                            <div class="container-fluid">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed button-nav-G" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand logo-G" href="index.html"><img src="images/logo.png" alt=""></a>
+                                </div>
+                        
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+                                    <ul class="nav navbar-nav menu-G">
+                                        <li class="active"><a href="index.html">Trang chủ <span class="sr-only">(current)</span></a></li>
+                                        <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+                                        <li class="dropdown hover-G">
+                                            <a href="san-pham.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sản phẩm <span class="caret"></span></a>
+                                            <ul class="dropdown-menu sub-menu-sp">
+                                                <li><a href="san-pham.html"><b> Bé trai</b></a></li>
+                                                <li><a href="san-pham.html"><b> Bé gái</b></a></li>
+                                                <li><a href="san-pham.html">Áo</a></li>
+                                                <li><a href="san-pham.html">Áo</a></li>
+                                                <li><a href="san-pham.html">Quần</a></li>
+                                                <li><a href="san-pham.html">Váy</a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href="san-pham.html"><b>Phụ kiện</b></a></li>
+                                                <li><a href="san-pham.html"><b>Mẹ và bé</b></a></li>
+                                                <li><a href="san-pham.html">Phụ kiện bé trai</a></li>
+                                                <li><a href="san-pham.html">Đồ đôi cho bé gái</a></li>
+                                                <li><a href="san-pham.html">Phụ kiện bé gái</a></li>
+                                                <li><a href="san-pham.html">Đồ đôi cho bé trai</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="tin-tuc.html">Tin tức</a></li>
+                                        <li><a href="lien-he.html">Liên hệ</a></li>
+                                    </ul>
+                                    <ul class="nav navbar-nav navbar-right nav-right-G">
+                                        <div class="search-G">
+                                            <img src="images/icon-search.png" alt="" class="icon"> 
+                                            <form class="navbar-form navbar-left search-hover-G">
+                                                <div class="form-group group-search-G">
+                                                    <input type="text" class="form-control" placeholder="Search">
+                                                    <img src="images/icon-search.png" alt="">
+                                                </div>
+                                                <span class="shadow-search-G">
+                                                </span>
+                                            </form>
+                                        </div>
+                                        <li><a href="#">
+                                                <div class="user-G">
+                                                    <img src="images/user.png" alt="">
+                                                    <div class="user-hover-G">
+                                                        <div class="login-res-G">
+                                                            <login>Đăng nhập</login>
+                                                            <registry>Đăng ký</registry>
+                                                        </div>
+                                                        <span class="bg-user-G"></span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <div class="cart-cart">
+                                            <li class="dropdown">
+                                                <button data-toggle="collapse" data-target="#demo9">
+                                                    <div class="mini-cart-G">
+                                                        <p>
+                                                            <a data-toggle="collapse" href="#footwear" aria-expanded="false" aria-controls="footwear">
+                                                                <img src="images/icon-cart.png" alt="">
+                                                            </a>
+                                                        </p>
+                                                        <div class="only-max-991">
+                                                            <div class="collapse cart-collapse-G" id="footwear">
+                                                                <p class="title">Giỏ hàng đang có 3 sản phẩm</p>
+                                                                <div class="cart-bx-G">
+                                                                    <div class="cart-box-G">
+                                                                        <div class="message">
+                                                                            <img src="images/1.jpg" alt="">
+                                                                            <div class="right-G">
+                                                                                <p class="text-bold-G">Máy ảnh kỹ thuật số </p>
+                                                                                <p class="price">1 x %12.00</p>
+                                                                                <div class="alert-close"> </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cart-box-G">
+                                                                        <div class="message1">
+                                                                            <img src="images/1.jpg" alt="">
+                                                                            <div class="right-G">
+                                                                                <p class="text-bold-G">Máy ảnh kỹ thuật số </p>
+                                                                                <p class="price">1 x %12.00</p>
+                                                                                <div class="alert-close1"> </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cart-box-G">
+                                                                        <div class="message2">
+                                                                            <img src="images/1.jpg" alt="">
+                                                                            <div class="right-G">
+                                                                                <p class="text-bold-G">Máy ảnh kỹ thuật số </p>
+                                                                                <p class="price">1 x %12.00</p>
+                                                                                <div class="alert-close2"> </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="total-G">
+                                                                        <sapo>Tổng tiền:</sapo>
+                                                                        <price-total>$250.00</price-total>
+                                                                    </div>
+                                                                    <div class="checkout-G">
+                                                                        Check out
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                                <div id="demo9" class="collapse">
+                                                    <div class="cart-hover-G">
+                                                        <p class="title">Giỏ hàng đang có 3 sản phẩm</p>
+                                                        <div class="cart-bx-G">
+                                                            <div class="cart-box-G">
+                                                                <div class="message">
+                                                                    <img src="images/2.jpg" alt="">
+                                                                    <div class="right-G">
+                                                                        <p class="text-bold-G">Máy ảnh kỹ thuật số </p>
+                                                                        <p class="price">1 x %12.00</p>
+                                                                        <div class="alert-close"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cart-box-G">
+                                                                <div class="message1">
+                                                                    <img src="images/3.jpg" alt="">
+                                                                    <div class="right-G">
+                                                                        <p class="text-bold-G">Máy ảnh kỹ thuật số </p>
+                                                                        <p class="price">1 x %12.00</p>
+                                                                        <div class="alert-close1"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cart-box-G">
+                                                                <div class="message2">
+                                                                    <img src="images/item7.jpg" alt="">
+                                                                    <div class="right-G">
+                                                                        <p class="text-bold-G">Máy ảnh kỹ thuật số </p>
+                                                                        <p class="price">1 x %12.00</p>
+                                                                        <div class="alert-close2"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="total-G">
+                                                                <sapo>Tổng tiền:</sapo>
+                                                                <price-total>$250.00</price-total>
+                                                            </div>
+                                                            <div class="checkout-G">
+                                                                Check out
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </div>
+                                    </ul>
+                                </div><!-- /.navbar-collapse -->
+                            </div><!-- /.container-fluid -->
+                        </nav>
+                         <!-- giao diện dành riêng cho md -->
+                        <nav class="nav-G-md">
+                            <div class="container-fluid">
+                                <div class="navbar-header-G">
+                                    <div class="row">
+                                        <div class="col-sm-4 col-xs-4">
+                                            <div class="button-nav">
+                                                <button data-toggle="collapse" data-target="#demo" style=" border: none; background: unset;">
+                                                    <i class="fa fa-bars" aria-hidden="true"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-xs-4">
+                                            <div class="logo-G">
+                                                <a href="">
+                                                    <img src="images/logo.png" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-xs-4">
+                                            <div class="cart-G">
+                                                <img src="images/icon-cart.png" alt="">
+                                                <p class="amount">3</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="search-G-md">
+                                        <form action="/action_page.php">
+                                            <div class="input-group full-width-md-G">
+                                                <input type="text" class="form-control border-radius-md-G" placeholder="Search" name="search">
+                                                <img src="images/icon-search.png" alt="">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </nav>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div id="demo" class="collapse menu-collapse-G">
+                            <a href=""> Trang chủ</a>
+                            <a href=""> Giới thiệu</a>
+                            <a href=""> Sản phẩm</a>
+                            <a href=""> Tin tức</a>
+                            <a href=""> Liên hệ</a>
+                            <a href="" ><i class="fa fa-user" aria-hidden="true"></i>Đăng nhập</a>
+                            <a href="" class="regis-G"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Đăng ký</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section>
+                <header>
+                    <div class="banner-G">
+                        <div class="bxslider">
+                            <a href="" class="banner">
+                                <img src="images/slider_1.jpg" alt="">
+                            </a>
+                            <a href="" class="banner">
+                                <img src="images/slider_2.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </header>
+                <article>
+                    <div class="container">
+                        <div class="row">
+                            <ul class="breadcrumb">
+                                <li><a href="#">Trang chủ</a></li>
+                                <li><a href="#">Sản phẩm</a></li>
+                                <li class="active"><a href="#">Tank top- hoa lá</a></li>
+                            </ul>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="img-zoom-container">
+                                    <img id="myimage" class="img-sp" src="images/9gfqr1.jpg" width="300" height="800">
+                                    <div id="myresult" class="img-zoom-result"></div>
+                                </div>
+                                <script>
+                                    // Initiate zoom effect:
+                                    imageZoom("myimage", "myresult");
+                                </script>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <span class="title-chitiet">Tank top và quần lá cọ </span>
+                                <div class="price-chitiet">
+                                    <a href="" class="price-red">250.000₫</a>
+                                    <a href="" class="old-price-chitiet">320.000₫</a>
+                                </div>
+                                <div class="code">
+                                    <span>Mã sản phẩm</span>
+                                    <span class="update">Đang cập nhật</span>
+                                </div>
+                                <div class="row-amount">
+                                    <span class="amount">SỐ LƯỢNG</span>
+                                    <form>
+                                        <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+                                        <input type="number" id="number" value="1" />
+                                        <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                                    </form>
+                                    <!-- hiện popup  -->
+                                    <button type="button" class="icon-ruler" data-toggle="modal" data-target="#myModal">
+                                        <img src="images/phone_product_icon.png" alt="">
+                                    </button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="myModal" role="dialog">
+                                            <div class="modal-dialog">
+                                                <!-- Modal content-->
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <span> Hướng dẫn đo size</span>
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    </div>
+                                                    <img class="size" src="images/size.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <span>Hướng dẫn đo size</span>
+                                </div>
+                                <div class="row-cart">
+                                    <span class="add-cart">Thêm vào giỏ hàng</span>
+                                    <span class="buy-now">Mua ngay</span>
+                                </div>
+                                <div class="row-advisory">
+                                    <span>Tư vấn mua hàng</span>
+                                    <a href="tel:+84968466379"><i class="fa fa-volume-control-phone" aria-hidden="true"></i> 0968 46 63 79</a>
+                                </div>
+                                <div class="description">
+                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+                                          <div class="panel-heading" role="tab" id="headingOne">
+                                            <h4 class="panel-title">
+                                              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                MÔ TẢ SẢN PHẨM <i class="accordion_icon fa fa-plus"></i>
+                                              </a>
+                                            </h4>
+                                          </div>
+                                          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="panel-body">
+                                                Đồ bộ dành cho bé trai từ 1 đến 6 tuổi<br><br>
+                                                Chất liệu cotton mềm mại và thoáng mát, thấm hút mồ hôi tối đa cho bé thoải mái suốt một ngày dài năng động<br><br>
+                                                Hình in rõ nét, sinh động, không bong  tróc dù qua nhiều lần giặt tẩy
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                          <div class="panel-heading" role="tab" id="headingTwo">
+                                            <h4 class="panel-title">
+                                              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                HƯỚNG DẪN SỬ DỤNG <i class="accordion_icon fa fa-plus"></i>
+                                              </a>
+                                            </h4>
+                                          </div>
+                                          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                            <div class="panel-body">
+                                                Giặt máy ở chế độ nhẹ ngàng, nhiệt độ thường<br><br>
+                                                Không sử dụng hóa chất tấy rửa có chứa clo<br><br>
+                                                Phơi trong bóng mát<br><br>
+                                                Sấy khô ở nhiệt độ thấp, nhẹ nhàng<br><br>
+                                                Là ở nhiệt độ trung bình 80 độ C<br><br>
+                                                Giặt với sản phẩm cùng màu<br><br>
+                                                Không là lên chi tiết trang trí
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="same-type">
+                                <span class="title">Sản phẩm cùng loại</span>
+                                <div class="row">
+                                    <div class="same-type-slide">
+                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                            <div class="sp-2-G-2">
+                                                <div class="relative-sp2-G-2">
+                                                    <a href=""><img src="images/mombaby2.jpg" alt="Áo kẻ monday night"></a>
+                                                    <a href="" class="title-pro-G-2"> Váy nữ ôm dáng</a>
+                                                    <span class="price-pro-G-2">130.000d</span>
+                                                    <span class="old-price-G-2">180.000d</span>
+                                                    <div class="sp-1-hover-G-2">
+                                                        <a href="" class="eye-2"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                                        <a href="" class="buy-2"> Mua hàng</a>
+                                                    </div>
+                                                    <div class="sale-2">
+                                                        -11%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                            <div class="sp-2-G-2">
+                                                <div class="relative-sp2-G-2">
+                                                    <a href=""><img src="images/mombaby3.jpg" alt="Áo kẻ monday night"></a>
+                                                    <a href="" class="title-pro-G-2"> Váy nữ ôm dáng</a>
+                                                    <span class="price-pro-G-2">130.000d</span>
+                                                    <span class="old-price-G-2">180.000d</span>
+                                                    <div class="sp-1-hover-G-2">
+                                                        <a href="" class="eye-2"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                                        <a href="" class="buy-2"> Mua hàng</a>
+                                                    </div>
+                                                    <div class="sale-2">
+                                                        -11%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                            <div class="sp-2-G-2">
+                                                <div class="relative-sp2-G-2">
+                                                    <a href=""><img src="images/mombaby2 (1).jpg" alt="Áo kẻ monday night"></a>
+                                                    <a href="" class="title-pro-G-2"> Váy nữ ôm dáng</a>
+                                                    <span class="price-pro-G-2">130.000d</span>
+                                                    <span class="old-price-G-2">180.000d</span>
+                                                    <div class="sp-1-hover-G-2">
+                                                        <a href="" class="eye-2"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                                        <a href="" class="buy-2"> Mua hàng</a>
+                                                    </div>
+                                                    <div class="sale-2">
+                                                        -11%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                            <div class="sp-2-G-2">
+                                                <div class="relative-sp2-G-2">
+                                                    <a href=""><img src="images/mombaby-1.jpg" alt="Áo kẻ monday night"></a>
+                                                    <a href="" class="title-pro-G-2"> Váy nữ ôm dáng</a>
+                                                    <span class="price-pro-G-2">130.000d</span>
+                                                    <span class="old-price-G-2">180.000d</span>
+                                                    <div class="sp-1-hover-G-2">
+                                                        <a href="" class="eye-2"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                                        <a href="" class="buy-2"> Mua hàng</a>
+                                                    </div>
+                                                    <div class="sale-2">
+                                                        -11%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                            <div class="sp-2-G-2">
+                                                <div class="relative-sp2-G-2">
+                                                    <a href=""><img src="images/mombaby.jpg" alt="Áo kẻ monday night"></a>
+                                                    <a href="" class="title-pro-G-2"> Váy nữ ôm dáng</a>
+                                                    <span class="price-pro-G-2">130.000d</span>
+                                                    <span class="old-price-G-2">180.000d</span>
+                                                    <div class="sp-1-hover-G-2">
+                                                        <a href="" class="eye-2"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                                        <a href="" class="buy-2"> Mua hàng</a>
+                                                    </div>
+                                                    <div class="sale-2">
+                                                        -11%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                            <div class="sp-2-G-2">
+                                                <div class="relative-sp2-G-2">
+                                                    <a href=""><img src="images/begai10.jpg" alt="Áo kẻ monday night"></a>
+                                                    <a href="" class="title-pro-G-2"> Váy nữ ôm dáng</a>
+                                                    <span class="price-pro-G-2">130.000d</span>
+                                                    <span class="old-price-G-2">180.000d</span>
+                                                    <div class="sp-1-hover-G-2">
+                                                        <a href="" class="eye-2"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                                        <a href="" class="buy-2"> Mua hàng</a>
+                                                    </div>
+                                                    <div class="sale-2">
+                                                        -11%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </article>
+            </section>
+            <footer>
+                <div class="footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="left-foot">
+                                    <div class="bx-lf">
+                                        <a class="title-bx-lf-G"> Quy định đổi trả hàng</a>
+                                        <sapo><b> ikids clohing </b>sẵn sàng hỗ trợ đổi sản phẩm cho bạn trong vòng 15 ngày trên toàn hệ thống</sapo>
+                                    </div>
+                                    <div class="bx-lf">
+                                        <a class="title-bx-lf-G">
+                                            Khách hàng thân thiết
+                                        </a>
+                                        <sapo>Chính sách khách hàng thân thiết của iKids clothing khi mua đơn hàng trị giá 500.000đ, quý khách sẽ được cấp ngay thẻ VIP có ưu đãi 15% và 20% khi sinh nhật</sapo>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="right-foot">
+                                    <a class="title-bx-lf-G">Kết nối với iKids clothing</a>
+                                    <div class="icon">
+                                        <a href="">
+                                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                                        </a>
+                                        <a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                        <a href=""> <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                        <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="single">
+                                                <h2>Đăng ký nhận tin từ chúng tôi</h2>
+                                            <div class="input-group">
+                                                <input type="email" class="form-control" placeholder="Enter your email">
+                                                <span class="input-group-btn">
+                                                <button class="btn btn-theme" type="submit">
+                                                    <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                                                </button>
+                                                </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-white">
+                    <div class="container">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="address">
+                                <p href="">
+                                    <img src="images/logo.png" alt="">
+                                </p>
+                                <p>Địa chỉ trụ sở: Phòng 404 Tòa nhà GP Invest, 170 La Thành, P. Ô Chợ Dừa, Q. Đống Đa, Hà Nội</p>
+                                <p>Điện thoại: 1800 6750</p>
+                                <p>Fax: 3804 52 6750</p>
+                                <p>Email: support@sapo.vn</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="about-us">
+                                <p class="title-us">
+                                    Về chúng tôi
+                                </p>
+                                <div class="title-contain">
+                                    <p>Trang chủ</p>
+                                    <p>Giới thiệu</p>
+                                    <p>Sản phẩm</p>
+                                    <p>Tin tức</p>
+                                    <p>Liên hệ</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="about-us">
+                                <p class="title-us">
+                                    Bạn nên xem thêm
+                                </p>
+                                <div class="title-contain">
+                                    <p>Trang chủ</p>
+                                    <p>Giới thiệu</p>
+                                    <p>Sản phẩm</p>
+                                    <p>Tin tức</p>
+                                    <p>Liên hệ</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="about-us">
+                                <p class="title-us">
+                                    Thông tin khác
+                                </p>
+                                <div class="title-contain">
+                                    <p>Trang chủ</p>
+                                    <p>Giới thiệu</p>
+                                    <p>Sản phẩm</p>
+                                    <p>Tin tức</p>
+                                    <p>Liên hệ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="license">
+                        Bản quyền thuộc về <span class="banquyen"> OH! Team </span> | Cung cấp bởi <span class="banquyen">Sapo</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <p class="totop"> 
+            <a href="#wrap" class="totop-bx" style="display: block;">
+                <i class="fa fa-chevron-up" aria-hidden="true"></i>
+            </a>
+        </p>
+    </body>
+</html>

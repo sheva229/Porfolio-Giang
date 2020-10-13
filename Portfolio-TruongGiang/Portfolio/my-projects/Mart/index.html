@@ -1,0 +1,493 @@
+<!-- link web mau
+http://templatetasarim.com/opencart/Grocery/Mart/index.php?route=common/home -->
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <title>Mart</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.css">
+        <script src="js/jquery-3.4.1.js"></script>
+        <link rel="stylesheet" type="text/css" href="bootstrap-3.4.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <script src="js/jquery.bxslider.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.bxslider').bxSlider({
+                    auto:true,
+                    slideWidth:860,
+                    slideMargin:10,
+                    minSlides:1,
+                    maxSlides:1,
+                    moveSlides:1,
+                    speed:1000,
+                    pause:3000,
+                    pager:true,
+                    controls:false,
+                    infiniteLoop:true
+                });
+            });
+        </script>
+        <!-- hot-deal banner  -->
+        <script>
+            $(document).ready(function(){
+                $('.hot-deal-banner').bxSlider({
+                    auto:true,
+                    slideMargin:10,
+                    minSlides:1,
+                    maxSlides:1,
+                    moveSlides:1,
+                    speed:1000,
+                    pause:5000,
+                    pager:false,
+                    controls:true,
+                    infiniteLoop:true
+                });
+            });
+        </script>
+        <!-- hot-deal banner  -->
+
+        <!-- slide-judge  -->
+        <script>
+            $(document).ready(function(){
+                $('.judge').bxSlider({
+                    auto:true,
+                    slideMargin:10,
+                    minSlides:1,
+                    maxSlides:1,
+                    moveSlides:1,
+                    speed:1000,
+                    pause:1000,
+                    pager:false,
+                    controls:false,
+                    infiniteLoop:true
+                });
+            });
+        </script>
+        <!-- slide-judge  -->
+
+        <!-- menu xs- menu dọc  -->
+        <script>
+            function openNav() {
+            document.getElementById("mySidepanel").style.width = "250px";
+            }
+            
+            function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";
+            }
+        </script>
+        <!-- menu xs- menu dọc  -->
+
+    <!-- countdown -->
+            <script>
+                // Set the date we're counting down to
+                var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+                
+                // Update the count down every 1 second
+                var x = setInterval(function() {
+                
+                // Get today's date and time
+                var now = new Date().getTime();
+                    
+                // Find the distance between now and the count down date
+                var distance = countDownDate - now;
+                    
+                // Time calculations for days, hours, minutes and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    
+                // Output the result in an element with id="demo"
+                document.getElementById("demo01").innerHTML = days + "</br>Days" ;
+                document.getElementById("demo11").innerHTML = hours + "</br>Hrs";
+                document.getElementById("demo21").innerHTML = minutes + "</br>Mins";
+                document.getElementById("demo31").innerHTML = seconds + "</br>Secs";
+                document.getElementById("demo111").innerHTML = days + "</br>Days" ;
+                document.getElementById("demo222").innerHTML = hours + "</br>Hrs";
+                document.getElementById("demo333").innerHTML = minutes + "</br>Mins";
+                document.getElementById("demo444").innerHTML = seconds + "</br>Secs";
+                    
+                // If the count down is over, write some text 
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("demo00").innerHTML = "EXPIRED";
+                    document.getElementById("demo111").innerHTML = "EXPIRED";
+                }
+                }, 1000);
+            </script>
+    <!-- countdown -->
+    </head>
+    <body>
+        <div id="wrap">
+            <header>
+                <div class="top-line">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <div class="top-line__colorChange">
+                                    <a href="" class="xs"> Get Up to 70% Discount Everyday</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-9 col-md-9 col-sm-9">
+                                <ul class="menu">
+                                    <li><a href=""><p class="xs"> Wish List (0)</p><i class="fa fa-heart-o" aria-hidden="true"></i></a><img src="images/line-menu.jpg" alt=""></li>
+                                    <li class="currency">
+                                        <div class="dropdown">
+                                            <a class="dropdown-toggle currency__width" type="button" data-toggle="dropdown">
+                                                <p class="xs fl">Currency</p><i class="fa fa-eur" aria-hidden="true"></i><span class="caret"></span>
+                                            </a>
+                                            <img src="images/line-menu.jpg" alt="">
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">€ Euro</a></li>
+                                                <li><a href="#">£ Pound Sterling</a></li>
+                                                <li><a href="#">$ US Dollar</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="language">
+                                        <div class="dropdown">
+                                            <a class="dropdown-toggle language-width" type="button" data-toggle="dropdown">
+                                                <p class="xs fl"> Language </p>
+                                                <img class="not-xs flag" src="images/lien-hiep-anh.png" alt="">
+                                                <span class="caret"></span>
+                                            </a>
+                                            <img src="images/line-menu.jpg" alt="">
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><img src="images/lien-hiep-anh.png" alt="">  &nbsp;English</a></li>
+                                                <li><a href="#"><img src="images/turkey.png" alt="">  &nbsp;Türkçe</a></li>
+                                                <li><a href="#"><img src="images/arab.png" alt="">  &nbsp;Arabic</a></li>
+                                                <li><a href="#"><img src="images/france.jpg" alt="">  &nbsp;French</a></li>
+                                                <li><a href="#"><img src="images/italy.jpg" alt="">  &nbsp;Italian</a></li>
+                                                <li><a href="#"><img src="images/Poland.png" alt="">  &nbsp;Polish</a></li>
+                                                <li><a href="#"><img src="images/spanish.jpg" alt="">  &nbsp;Spanish</a></li>
+                                                <li><a href="#"><img src="images/germany.png" alt="">  &nbsp;German</a></li>
+                                                <li><a href="#"><img src="images/Vietnam_Country_flag-512.png" alt=""> &nbsp;Vietnamese</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="my-account">
+                                        <div class="dropdown">
+                                            <a class="dropdown-toggle" type="button" data-toggle="dropdown"><p class="xs fl">Account</p><i class="fa fa-user-circle-o" aria-hidden="true"></i> <span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Register</a></li>
+                                                <li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="logo-search">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                <a href="" class="logo">
+                                    <img src="images/logo.png" alt="">
+                                </a>
+                                <div class="cart not-xs">
+                                    <span class="cart-1">
+                                        <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                    </span>
+                                    <p> 0 Items / 0.00€</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-9 col-sm-9 col-xs-12">
+                                <form class="search"> 
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search" id="txtSearch"/>
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-primary" type="submit">
+                                                <span class="glyphicon glyphicon-search"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="cart xs">
+                                    <span class="cart-1">
+                                        <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                    </span>
+                                    <p> 0 Items / 0.00€</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- area for xs  -->
+                <div class="menu-xs">
+                    <div id="mySidepanel" class="sidepanel">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                        <a href="#" class="menu-xs__black">Danh mục</a>
+                        <a href="#">Đồ chay</a>
+                        <a data-toggle="collapse" data-target="#demo2">Trái cây <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                            <div id="demo2" class="collapse">
+                                <a href="">Mãng cầu</a>
+                                <a href="">Soài (6)</a>
+                                <a href="">Dưa hấu (4)</a>
+                                <a href="">Đu đủ (18)</a>
+                                <a href="">Cam (13)</a>
+                            </div>
+                        <a data-toggle="collapse" data-target="#demo3">Thịt <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                            <div id="demo3" class="collapse">
+                                <a href="">Heo</a>
+                                <a href="">Gà (6)</a>
+                                <a href="">Vịt (4)</a>
+                                <a href="">Bò (18)</a>
+                                <a href="">Cá (13)</a>
+                            </div>
+                        <a href="#">Trứng</a>
+                        <a href="#">Hải sản</a>
+                        <a href="#">Rau, củ, quả</a>
+                        <a href="#">Gạo, lúa mì</a>
+                    </div>
+                    <button class="openbtn" onclick="openNav()">☰</button>
+                </div>
+                <!-- area for xs  -->
+            </header>
+                <div class="container">
+                    <div class="row">
+                        <ul class="mini-menu xs">
+                            <li><a href="">Trang chủ</a></li>
+                            <li><a href="">Bán chạy</a></li>
+                            <li><a href="">Liên hệ</a></li>
+                            <li><a href="">Bản đồ</a></li>
+                            <li><a href="">Thương hiệu</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                            <nav>
+                                <div class="col-lg-12 col-md-12 col-sm-12 xs">
+                                    <div class="container-fluid">
+                                        <div class="row xs">
+                                            <ul class="menu-vertical">
+                                                <li><a class="menu-vertical__title">☰ &nbsp;&nbsp; Danh mục</a></li>
+                                                <li><img src="images/vegetables.png" alt=""><a href="">Đồ chay</a></li>
+                                                <li class="menu-vertical__main-menu"><img src="images/fruits.png" alt="">
+                                                    <a href="">Trái cây <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                                    <ul class="menu-vertical__sub-menu">
+                                                        <li><a href="">Mãng cầu</a></li>
+                                                        <li><a href="">Soài (6)</a></li>
+                                                        <li><a href="">Dưa hấu (4)</a></li>
+                                                        <li><a href="">Đu đủ (18)</a></li>
+                                                        <li><a href="">Cam (13)</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-vertical__main-menu"><img src="images/meat-slice-silhouette.png" alt="">
+                                                    <a href="">Thịt <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                                    <ul class="menu-vertical__sub-menu">
+                                                        <li><a href="">Heo</a></li>
+                                                        <li><a href="">Gà (6)</a></li>
+                                                        <li><a href="">Vịt (4)</a></li>
+                                                        <li><a href="">Bò (18)</a></li>
+                                                        <li><a href="">Cá (13)</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><img src="images/egg.png" alt=""><a href="">Trứng</a></li>
+                                                <li><img src="images/seafood.png" alt=""><a href="">Hải sản</a></li>
+                                                <li><img src="images/vegetable.png" alt=""><a href="">Rau, củ, quả</a></li>
+                                                <li><img src="images/wheat.png" alt=""><a href="">Gạo, lúa mì</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="row">
+                                            <div class="hot-deal">
+                                                <a href="" class="hot-deal__title">Bán chạy</a>
+                                                <div class="hot-deal-banner">
+                                                    <div class="hot-deal__sp">
+                                                        <a href=""><img src="images/inspire-opencart-free-theme-product-03-243x270.jpg" alt=""></a>
+                                                        <a href="" class="hot-deal__sp--title">Bánh kẹp xúc xích Vegie</a>
+                                                        <div class="hot-deal__sp--price">
+                                                            <new>46.000 ₫</new>
+                                                            <old>58.000 ₫</old>
+                                                        </div>
+                                                        <div class="hot-deal__sp--star">
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </div>
+                                                        <span class="hot-deal__sp__sale">SALE</span>
+                                                        <div class="hot-deal__sp--count-down">
+                                                            <p id="demo01"></p>
+                                                            <p id="two-dot">:</p>
+                                                            <p id="demo11"></p>
+                                                            <p id="two-dot">:</p>
+                                                            <p id="demo21"></p>
+                                                            <p id="two-dot">:</p>
+                                                            <p id="demo31"></p>
+                                                        </div>
+                                                        <div class="hot-deal__sp--add-cart">
+                                                            <a href="">
+                                                                <i class="fa fa-shopping-cart" aria-hidden="true">
+                                                                    <span class="add-cart__note-cart"></span>
+                                                                </i>
+                                                            </a>
+                                                            <a href="">
+                                                                <i class="fa fa-sticky-note-o" aria-hidden="true">
+                                                                    <span class="add-cart__note-page"></span>
+                                                                </i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hot-deal__sp">
+                                                        <a href=""><img src="images/inspire-opencart-free-theme-product-02-243x270.jpg" alt=""></a>
+                                                        <a href="" class="hot-deal__sp--title">Bánh kẹp xúc xích Vegie</a>
+                                                        <div class="hot-deal__sp--price">
+                                                            <new>46.000 ₫</new>
+                                                            <old>58.000 ₫</old>
+                                                        </div>
+                                                        <div class="hot-deal__sp--star">
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </div>
+                                                        <span class="hot-deal__sp--sale">SALE</span>
+                                                        <div class="hot-deal__sp--count-down">
+                                                            <p id="demo111"></p>
+                                                            <p id="two-dot">:</p>
+                                                            <p id="demo222"></p>
+                                                            <p id="two-dot">:</p>
+                                                            <p id="demo333"></p>
+                                                            <p id="two-dot">:</p>
+                                                            <p id="demo444"></p>
+                                                        </div>
+                                                        <div class="hot-deal__sp--add-cart">
+                                                            <a href="">
+                                                                <i class="fa fa-shopping-cart" aria-hidden="true">
+                                                                    <span class="add-cart__note-cart"></span>
+                                                                </i>
+                                                            </a>
+                                                            <a href="">
+                                                                <i class="fa fa-sticky-note-o" aria-hidden="true">
+                                                                    <span class="add-cart__note-page"></span>
+                                                                </i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="email">
+                                                <div class="thumbnail center well well-sm text-center">
+                                                    <b>Đăng ký thông báo khuyến mại</b>
+                                                    <form action="" method="post" role="form">
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">
+                                                            <i class="fa fa-envelope"></i>
+                                                            </span>
+                                                            <input class="form-control" type="text" id="" name="" placeholder="your@email.com">
+                                                        </div>
+                                                        <input type="submit" value="Subscribe" class="btn btn-large btn-primary" />
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="judge">
+                                                <div class="judge-giang">
+                                                    <img src="images/avatar.png" alt="">
+                                                    <div class="judge__content">
+                                                        <h3>Trường Giang</h3>
+                                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> Lorem Ipsum has been the industry's standard dummy 
+                                                            text ever since the 1500s</p>
+                                                    </div>
+                                                </div>
+                                                <div class="judge-giang">
+                                                    <img src="images/taylor.jpg" alt="">
+                                                    <div class="judge__content">
+                                                        <h3>Taylor</h3>
+                                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> Lorem Ipsum has been the industry's standard dummy 
+                                                            text ever since the 1500s</p>
+                                                    </div>
+                                                </div>
+                                                <div class="judge-giang">
+                                                    <img src="images/Andriy_Shevchenko_2017.jpg" alt="">
+                                                    <div class="judge__content">
+                                                        <h3>Shevchenko</h3>
+                                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> Lorem Ipsum has been the industry's standard dummy 
+                                                            text ever since the 1500s</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="row-row">
+                                                <div class="poster">
+                                                    <a href=""><img src="images/263x451-263x451.jpg" alt=""><span class="poster__effect"></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        
+                        <section>
+                            <header>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="banner">
+                                            <div class="bxslider">
+                                                <a href="" class="bxslider-slide"><img src="images/848X464-d02-slider-01-848x464.jpg" alt=""></a>
+                                                <a href="" class="bxslider-slide"><img src="images/848X464-d02-slider-02-848x464.jpg" alt=""></a>
+                                            </div>
+                                        </div>
+                                        <div class="mini-banner">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                    <a href=""><img src="images/409x236-d02-banner-01-409x236.jpg" alt=""><span class="mini-banner__effect"></span></a>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                    <a href=""><img src="images/409x236-d02-banner-02-409x236.jpg" alt=""><span class="mini-banner__effect"></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="category">
+                                                <h3>Danh mục sản phẩm</h3>
+                                                <ul class="nav nav-tabs">
+                                                  <li class="active"><a data-toggle="tab" href="#menu1">Thịt</a></li>
+                                                  <li><a data-toggle="tab" href="#menu2">Cá</a></li>
+                                                  <li><a data-toggle="tab" href="#menu3">Trứng</a></li>
+                                                  <li><a data-toggle="tab" href="#menu3">Sữa</a></li>
+                                                  <li><a data-toggle="tab" href="#menu3">Rau</a></li>
+                                                  <li><a data-toggle="tab" href="#menu3">Farmer</a></li>
+                                                </ul>
+                                              
+                                                <div class="tab-content">
+                                                  <div id="menu1" class="tab-pane fade in active">
+                                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            <a href="" class="content-img"><img src="images/inspire-opencart-free-theme-product-08-190x210.jpg" alt=""></a>
+                                                        </div>
+                                                  </div>
+                                                  <div id="menu2" class="tab-pane fade">
+                                                    <h3>Menu 2</h3>
+                                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                                                  </div>
+                                                  <div id="menu3" class="tab-pane fade">
+                                                    <h3>Menu 3</h3>
+                                                    <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                                  </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+                            <article>
+        
+                            </article>
+                            <footer>
+        
+                            </footer>
+                        </section>
+                    </div>
+                </div>
+            <footer>
+                
+            </footer>
+        </div>
+    </body>
+</html>

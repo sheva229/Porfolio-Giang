@@ -1,0 +1,62 @@
+/*
+Error: Undefined variable: "$font-size-14".
+        on line 3 of D:\Git-Template\templalate-t3-2017\vbs2019\sass\defaul.scss
+
+1: @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,800,900&subset=latin-ext,vietnamese');
+2: @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700&display=swap&subset=latin-ext,vietnamese');
+3: body {font-size: $font-size-14;color:$color-main;font-family: $font-two;line-height: 1.5; font-weight: 400;}
+4: img{max-width: 100%;}
+5: .div-table{display: table;width: 100%;}
+6: .div-table-cell{display: table-cell;vertical-align: middle;}
+7: .flex-row {
+8:     -js-display: flex;
+
+Backtrace:
+D:\Git-Template\templalate-t3-2017\vbs2019\sass\defaul.scss:3
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+D:/New folder (2)/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+D:/New folder (2)/bin/sass:22:in `load'
+D:/New folder (2)/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$font-size-14\".\A         on line 3 of D:\Git-Template\templalate-t3-2017\vbs2019\sass\defaul.scss\A \A 1: @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,800,900&subset=latin-ext,vietnamese');\A 2: @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700&display=swap&subset=latin-ext,vietnamese');\A 3: body {font-size: $font-size-14;color:$color-main;font-family: $font-two;line-height: 1.5; font-weight: 400;}\A 4: img{max-width: 100%;}\A 5: .div-table{display: table;width: 100%;}\A 6: .div-table-cell{display: table-cell;vertical-align: middle;}\A 7: .flex-row {\A 8:     -js-display: flex;"; }

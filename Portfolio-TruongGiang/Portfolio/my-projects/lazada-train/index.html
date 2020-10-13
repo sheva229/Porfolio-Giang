@@ -1,0 +1,2737 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <!-- link web mẫu
+        https://www.lazada.vn/# -->
+        <title>Lazada trainning</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.css">
+        <script src="js/1.11.3/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="bootstrap-3.4.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <script src="js/jquery.bxslider.min.js"></script>
+        <script src="js/auxiliary-rater-0831401/rater.js" charset="utf-8"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.bg-gecko__banner-slide').bxSlider({
+                    auto:true,
+                    mode:'fade',
+                    // slideWidth:,
+                    slideMargin:0,
+                    minSlides:1,
+                    maxSlides:1,
+                    moveSlides:1,
+                    speed:1000,
+                    pause:2000,
+                    pager:true
+                });
+                // @@@@@@@@@@@@@@@@@@@@@@@@
+                var options = {
+                    max_value: 6,
+                    step_size: 0.5,
+                }
+                $(".rate").rate(options);
+                // @@@@@@@@@@@@@@@@@@@@
+                // anchor mượt
+                $(".totop-bx").on('click', function(event) {
+
+                  if (this.hash !== "") {
+                    event.preventDefault();
+
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                      scrollTop: $(hash).offset().top
+                    }, 800, function(){
+
+                      window.location.hash = hash;
+                    });
+                  } 
+                  });
+                  // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                  
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 50) {
+                        $('.totop a').fadeIn();
+                    } else {
+                        $('.totop a').fadeOut();
+                    }
+                });
+
+                $(function () {
+                    $("div").slice(0, 4).show();
+                    $("#loadMore").on('click', function (e) 
+                                      {
+                        e.preventDefault();
+                        $("div:hidden").slice(0, 4).slideDown();
+                        if ($("div:hidden").length == 0) {
+                            $("#load").fadeOut('slow');
+                        }
+                        $('html,body').animate({
+                            scrollTop: $(this).offset().top
+                        }, 1500);
+                    });
+                });
+
+                // tắt quảng cáo 
+               
+                $('.btn-close-ads').click(function(){
+                  $('.banner').hide();
+                });
+                
+            });
+        </script>
+    </head>
+    <body>
+        <script>
+            // Set the date we're counting down to
+            var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+            
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+            
+              // Get today's date and time
+              var now = new Date().getTime();
+                
+              // Find the distance between now and the count down date
+              var distance = countDownDate - now;
+                
+              // Time calculations for days, hours, minutes and seconds
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+              // Output the result in an element with id="demo"
+              document.getElementById("demo").innerHTML = days + " " ;
+              document.getElementById("demo1").innerHTML = hours + " ";
+              document.getElementById("demo2").innerHTML = minutes + " ";
+              document.getElementById("demo3").innerHTML = seconds + " ";
+                
+              // If the count down is over, write some text 
+              if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+              }
+            }, 1000);
+        </script>
+        <div class="wrap">
+            <header id="top">
+                <div class="container-fluid banner-red">
+                    <div class="container">
+                        <div class="row">
+                            <div class="banner">
+                              <a href="" >
+                                  <img src="images/banner.jpg" class="banner__padding" title="Tưng bừng giảm giá 75%" alt="Tưng bừng giảm giá 75%">
+                              </a>
+                              <i class="fa fa-times btn-close-ads" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </header>
+            <nav>  
+               
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="container-fluid">
+                    <div class="row">
+                        <nav class="navbar-giang" data-spy="affix" data-offset-top="197">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="hastag">
+                                      <ul class="nav navbar-nav">
+                                          <li><a href="#" class="navbar-giang__uppercase text-blue">Tiết kiệm hơn với ứng dụng</a></li>
+                                          <li><a href="#" class="navbar-giang__uppercase text-blue">Bán hàng cùng Lazada</a></li>
+                                          <li><a href="#" class="navbar-giang__uppercase text-gray">Chăm sóc khách hàng</a></li>
+                                          <li><a href="#" class="navbar-giang__uppercase text-gray">Kiểm tra đơn hàng</a></li>
+                                          <li><a href="#" class="navbar-giang__uppercase text-gray">Đăng nhập</a></li>
+                                          <li><a href="#" class="navbar-giang__uppercase text-gray">Đăng ký</a></li>
+                                          <li><a href="#" class="navbar-giang__uppercase text-gray">Change Language</a></li>
+                                      </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-search">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                            <a href="" class="logo">
+                                                <img src="images/logo.png" title="Lazada mua sắm thả ga" alt="Lazada mua sắm thả ga">
+                                            </a>
+                                        </div>
+                                        <div class="bx-search-1">
+                                          <nav class="navbar navbar-expand-lg navbar-dark indigo mb-4">
+                                              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                              <form class="form-inline ml-auto">
+                                                  <div class="md-form my-0">
+                                                  <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                                                  </div>
+                                                  <button href="#!" class="btn btn-outline-white btn-md my-0 ml-sm-2" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                              </form>
+                                              </div>
+                                          </nav>
+                                        </div>
+                                        <i class="fa fa-cart-arrow-down cart-G" aria-hidden="true"></i>
+                                            <a href="" class="samsung">
+                                                <img src="images/banner-samsung.jpg" title="Quà tặng từ Sam Sung" alt="Quà tặng từ Sam Sung">
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                  </div> 
+                  <div class="banner-bigest">
+                    <div class="bg-gecko__banner-slide">
+                        <div href="" style="background-image: url(images/banner-ao.jpg);
+                        width: 100%;
+                        height: 348px;
+                        float: none;
+                        list-style: none;
+                        position: absolute;
+                        z-index: 50;
+                        display: block;
+                        background-color: #3e6eae;
+                        background-repeat: no-repeat;
+                        background-position: calc(50% + 112px) 0px;">
+                          
+                        </div>
+                        <div href="" style="background-image: url(images/VS_Banner.jpg);
+                        width: 100%;
+                        height: 348px;
+                        float: none;
+                        list-style: none;
+                        position: absolute;
+                        z-index: 50;
+                        display: block;
+                        background-color: #3e6eae;
+                        background-repeat: no-repeat;
+                        background-position: calc(50% + 112px) 0px;">
+                          
+                        </div>
+                        <div href="" style="background-image: url(images/banner-ao.jpg);
+                        width: 100%;
+                        height: 348px;
+                        float: none;
+                        list-style: none;
+                        position: absolute;
+                        z-index: 50;
+                        display: block;
+                        background-color: #3e6eae;
+                        background-repeat: no-repeat;
+                        background-position: calc(50% + 112px) 0px;">
+                          
+                        </div>
+                        <div href="" style="background-image: url(images/VS_Banner.jpg);
+                        width: 100%;
+                        height: 348px;
+                        float: none;
+                        list-style: none;
+                        position: absolute;
+                        z-index: 50;
+                        display: block;
+                        background-color: #3e6eae;
+                        background-repeat: no-repeat;
+                        background-position: calc(50% + 112px) 0px;">
+                          
+                        </div>
+                    </div>
+                  </div>
+                  <div class="banner-min-992">
+                      <div class="slide-992">
+                            <div href="" style="background-image: url(images/banner-ao.jpg);
+                            width: 100%;
+                            height: 348px;
+                            float: none;
+                            list-style: none;
+                            position: absolute;
+                            z-index: 50;
+                            display: block;
+                            background-color: #3e6eae;
+                            background-repeat: no-repeat;
+                            background-position: calc(50% + 112px) 0px;">
+                              
+                            </div>
+                            <div href="" style="background-image: url(images/VS_Banner.jpg);
+                            width: 100%;
+                            height: 348px;
+                            float: none;
+                            list-style: none;
+                            position: absolute;
+                            z-index: 50;
+                            display: block;
+                            background-color: #3e6eae;
+                            background-repeat: no-repeat;
+                            background-position: calc(50% + 112px) 0px;">
+                              
+                            </div>
+                            <div href="" style="background-image: url(images/banner-ao.jpg);
+                            width: 100%;
+                            height: 348px;
+                            float: none;
+                            list-style: none;
+                            position: absolute;
+                            z-index: 50;
+                            display: block;
+                            background-color: #3e6eae;
+                            background-repeat: no-repeat;
+                            background-position: calc(50% + 112px) 0px;">
+                              
+                            </div>
+                            <div href="" style="background-image: url(images/VS_Banner.jpg);
+                            width: 100%;
+                            height: 348px;
+                            float: none;
+                            list-style: none;
+                            position: absolute;
+                            z-index: 50;
+                            display: block;
+                            background-color: #3e6eae;
+                            background-repeat: no-repeat;
+                            background-position: calc(50% + 112px) 0px;">
+                              
+                            </div>
+                      </div>
+                  </div>
+                  <div class="bg-gecko">
+                      <div class="container">
+                          <div class="mainmenu nav">
+                              <ul id="nav">
+                                <li>
+                                  <ul>
+                                    <li class='sub-sub-menu relative-G'><a href="#">
+                                      <i class="fa fa-chevron-right right-G" aria-hidden="true"></i>Thiết bị điện tử</a>
+                                      <ul>
+                                        <li class="dienthoaididong"><a href="#"><i class="fa fa-chevron-right right-H" aria-hidden="true"></i>Điện thoại di động</a>
+                                            <div class="display-none">
+                                                <ul>
+                                                    <li><a href="#">Điện thoại di động</a></li>
+                                                    <li><a href="#">Máy tính bảng</a></li>
+                                                    <li><a href="#">Laptop</a></li>
+                                                    <li><a href="#">Máy tính để bàn</a></li>
+                                                    <li><a href="#">Âm thanh</a></li>
+                                                    <li><a href="#">Camera giám sát</a></li>
+                                                    <li><a href="#">Máy ảnh kỹ thuật số</a></li>
+                                                    <li><a href="#">Máy quay phim & Máy quay</a></li>
+                                                    <li><a href="#">Màn hình vi tính</a></li>
+                                                    <li><a href="#">Máy in</a></li>
+                                                    <li><a href="#">Đồng hồ thông minh</a></li>
+                                                    <li><a href="#">Máy chơi game</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="maytinhbang"><a href="#"><i class="fa fa-chevron-right right-H" aria-hidden="true"></i>Máy tính bảng</a>
+                                            <div class="display-none">
+                                              <ul>
+                                                  <li><a href="#">Máy ảnh kỹ thuật số</a></li>
+                                                  <li><a href="#">Máy quay phim & Máy quay</a></li>
+                                                  <li><a href="#">Màn hình vi tính</a></li>
+                                                  <li><a href="#">Máy in</a></li>
+                                                  <li><a href="#">Đồng hồ thông minh</a></li>
+                                                  <li><a href="#">Máy chơi game</a></li>
+                                                  <li><a href="#">Điện thoại di động</a></li>
+                                                  <li><a href="#">Máy tính bảng</a></li>
+                                                  <li><a href="#">Laptop</a></li>
+                                                  <li><a href="#">Máy tính để bàn</a></li>
+                                                  <li><a href="#">Âm thanh</a></li>
+                                                  <li><a href="#">Camera giám sát</a></li>
+                                              </ul>
+                                            </div>
+                                        </li>
+                                        <li class="laptop"><a href="#"><i class="fa fa-chevron-right right-H" aria-hidden="true"></i>Laptop</a>
+                                            <div class="display-none">
+                                              <ul>
+                                                  <li><a href="#">Điện thoại di động</a></li>
+                                                  <li><a href="#">Máy tính bảng</a></li>
+                                                  <li><a href="#">Laptop</a></li>
+                                                  <li><a href="#">Máy tính để bàn</a></li>
+                                                  <li><a href="#">Âm thanh</a></li>
+                                                  <li><a href="#">Camera giám sát</a></li>
+                                                  <li><a href="#">Máy ảnh kỹ thuật số</a></li>
+                                                  <li><a href="#">Máy quay phim & Máy quay</a></li>
+                                                  <li><a href="#">Màn hình vi tính</a></li>
+                                                  <li><a href="#">Máy in</a></li>
+                                                  <li><a href="#">Đồng hồ thông minh</a></li>
+                                                  <li><a href="#">Máy chơi game</a></li>
+                                              </ul>
+                                            </div>
+                                        </li>
+                                        <li><a href="#">Máy tính để bàn</a></li>
+                                        <li><a href="#">Âm thanh</a></li>
+                                        <li><a href="#">Camera giám sát</a></li>
+                                        <li><a href="#">Máy ảnh kỹ thuật số</a></li>
+                                        <li><a href="#">Máy quay phim & Máy quay</a></li>
+                                        <li><a href="#">Màn hình vi tính</a></li>
+                                        <li><a href="#">Máy in</a></li>
+                                        <li><a href="#">Đồng hồ thông minh</a></li>
+                                        <li><a href="#">Máy chơi game</a></li>
+                                      </ul>
+                                    </li>
+                                    <li class='sub-sub-menu relative-G'><a href="#"><i class="fa fa-chevron-right right-G" aria-hidden="true"></i>Phụ kiện điện tử</a>
+                                      <ul>
+                                        <li><a href="#">Phụ kiện di động</a></li>
+                                        <li><a href="#">Thiết bị thông minh</a></li>
+                                        <li><a href="#">Thiết bị số</a></li>
+                                        <li><a href="#">Phụ kiện máy ảnh</a></li>
+                                        <li><a href="#">Phụ kiện Flycam</a></li>
+                                        <li><a href="#">Thiết bị lưu trữ</a></li>
+                                        <li><a href="#">Phụ kiện máy tính</a></li>
+                                        <li><a href="#">Linh kiện máy tính</a></li>
+                                        <li><a href="#">Phụ kiện ống kính</a></li>
+                                        <li><a href="#">Thiết bị mạng</a></li>
+                                        <li><a href="#">Phụ kiện máy chơi game</a></li>
+                                      </ul>
+                                    </li>
+                                    <li class='sub-sub-menu relative-G'><a href="#"><i class="fa fa-chevron-right right-G" aria-hidden="true"></i>TV & Thiết bị điện gia dụng</a>
+                                      <ul>
+                                        <li><a href="#">Tivi & Videos</a></li>
+                                        <li><a href="#">Điện gia dụng nhỏ</a></li>
+                                        <li><a href="#">Điện gia dụng lớn</a></li>
+                                        <li><a href="#">Phụ kiện Tivi</a></li>
+                                      </ul>
+                                    </li>
+                                    <li class='sub-sub-menu relative-G'><a href="#"><i class="fa fa-chevron-right right-G" aria-hidden="true"></i>Sức khỏe & Làm đẹp</a>
+                                      <ul>
+                                        <li><a href="#">Chăm sóc da</a></li>
+                                        <li><a href="#">Trang điểm</a></li>
+                                        <li><a href="#">Dụng cụ làm đẹp</a></li>
+                                        <li><a href="#">Chăm sóc cơ thể</a></li>
+                                        <li><a href="#">Chăm sóc tóc</a></li>
+                                        <li><a href="#">Chăm sóc cá nhân</a></li>
+                                        <li><a href="#">Dành cho Nam giới</a></li>
+                                        <li><a href="#">Nước hoa</a></li>
+                                        <li><a href="#">Thực phẩm chức năng</a></li>
+                                        <li><a href="#">Thực phẩm cho sắc đẹp</a></li>
+                                        <li><a href="#">Sức khỏe tình dục</a></li>
+                                        <li><a href="#">Thiết bị y tế</a></li>
+                                      </ul>
+                                    </li>
+                                    <li class='sub-sub-menu relative-G'><a href="#"><i class="fa fa-chevron-right right-G" aria-hidden="true"></i>Hàng mẹ, Bé & Đồ chơi</a>
+                                      <ul>
+                                          <li><a href="#">Điện thoại di động</a></li>
+                                          <li><a href="#">Máy tính bảng</a></li>
+                                          <li><a href="#">Laptop</a></li>
+                                          <li><a href="#">Máy tính để bàn</a></li>
+                                          <li><a href="#">Âm thanh</a></li>
+                                          <li><a href="#">Camera giám sát</a></li>
+                                          <li><a href="#">Máy ảnh kỹ thuật số</a></li>
+                                          <li><a href="#">Máy quay phim & Máy quay</a></li>
+                                          <li><a href="#">Màn hình vi tính</a></li>
+                                          <li><a href="#">Máy in</a></li>
+                                          <li><a href="#">Đồng hồ thông minh</a></li>
+                                          <li><a href="#">Máy chơi game</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class='sub-sub-menu relative-G'><a href="#"><i class="fa fa-chevron-right right-G" aria-hidden="true"></i>Siêu thị tạp hóa</a>
+                                      <ul>
+                                          <li><a href="#">Phụ kiện di động</a></li>
+                                          <li><a href="#">Thiết bị thông minh</a></li>
+                                          <li><a href="#">Thiết bị số</a></li>
+                                          <li><a href="#">Phụ kiện máy ảnh</a></li>
+                                          <li><a href="#">Phụ kiện Flycam</a></li>
+                                          <li><a href="#">Thiết bị lưu trữ</a></li>
+                                          <li><a href="#">Phụ kiện máy tính</a></li>
+                                          <li><a href="#">Linh kiện máy tính</a></li>
+                                          <li><a href="#">Phụ kiện ống kính</a></li>
+                                          <li><a href="#">Thiết bị mạng</a></li>
+                                          <li><a href="#">Phụ kiện máy chơi game</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class='sub-sub-menu relative-G'><a href="#"><i class="fa fa-chevron-right right-G" aria-hidden="true"></i>Hàng gia dụng & Đời sống</a>
+                                      <ul>
+                                        <li><a href="#">Điện thoại di động</a></li>
+                                        <li><a href="#">Máy tính bảng</a></li>
+                                        <li><a href="#">Laptop</a></li>
+                                        <li><a href="#">Máy tính để bàn</a></li>
+                                        <li><a href="#">Âm thanh</a></li>
+                                        <li><a href="#">Camera giám sát</a></li>
+                                        <li><a href="#">Máy ảnh kỹ thuật số</a></li>
+                                        <li><a href="#">Máy quay phim & Máy quay</a></li>
+                                        <li><a href="#">Màn hình vi tính</a></li>
+                                        <li><a href="#">Máy in</a></li>
+                                        <li><a href="#">Đồng hồ thông minh</a></li>
+                                        <li><a href="#">Máy chơi game</a></li>
+                                      </ul>
+                                    </li>
+                                    <li class='sub-sub-menu relative-G'><a href="#"><i class="fa fa-chevron-right right-G" aria-hidden="true"></i>Thời trang nữ</a>
+                                      <ul>
+                                        <li><a href="#">Điện thoại di động</a></li>
+                                        <li><a href="#">Máy tính bảng</a></li>
+                                        <li><a href="#">Laptop</a></li>
+                                        <li><a href="#">Máy tính để bàn</a></li>
+                                        <li><a href="#">Âm thanh</a></li>
+                                        <li><a href="#">Camera giám sát</a></li>
+                                        <li><a href="#">Máy ảnh kỹ thuật số</a></li>
+                                        <li><a href="#">Máy quay phim & Máy quay</a></li>
+                                        <li><a href="#">Màn hình vi tính</a></li>
+                                        <li><a href="#">Máy in</a></li>
+                                        <li><a href="#">Đồng hồ thông minh</a></li>
+                                        <li><a href="#">Máy chơi game</a></li>
+                                      </ul>
+                                    </li>
+                                    <li class='sub-sub-menu relative-G'><a href="#"><i class="fa fa-chevron-right right-G" aria-hidden="true"></i>Thời trang nam</a>
+                                      <ul>
+                                          <li><a href="#">Tivi & Videos</a></li>
+                                          <li><a href="#">Điện gia dụng nhỏ</a></li>
+                                          <li><a href="#">Điện gia dụng lớn</a></li>
+                                          <li><a href="#">Phụ kiện Tivi</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class='sub-sub-menu relative-G'><a href="#"><i class="fa fa-chevron-right right-G" aria-hidden="true"></i>Phụ kiện thời trang</a>
+                                      <ul>
+                                        <li><a href="#">Điện thoại di động</a></li>
+                                        <li><a href="#">Máy tính bảng</a></li>
+                                        <li><a href="#">Laptop</a></li>
+                                        <li><a href="#">Máy tính để bàn</a></li>
+                                        <li><a href="#">Âm thanh</a></li>
+                                        <li><a href="#">Camera giám sát</a></li>
+                                        <li><a href="#">Máy ảnh kỹ thuật số</a></li>
+                                        <li><a href="#">Máy quay phim & Máy quay</a></li>
+                                        <li><a href="#">Màn hình vi tính</a></li>
+                                        <li><a href="#">Máy in</a></li>
+                                        <li><a href="#">Đồng hồ thông minh</a></li>
+                                        <li><a href="#">Máy chơi game</a></li>
+                                      </ul>
+                                    </li>
+                                    <li class='sub-sub-menu relative-G'><a href="#"><i class="fa fa-chevron-right right-G" aria-hidden="true"></i>Thể thao & Du lịch</a>
+                                      <ul>
+                                          <li><a href="#">Chăm sóc da</a></li>
+                                          <li><a href="#">Trang điểm</a></li>
+                                          <li><a href="#">Dụng cụ làm đẹp</a></li>
+                                          <li><a href="#">Chăm sóc cơ thể</a></li>
+                                          <li><a href="#">Chăm sóc tóc</a></li>
+                                          <li><a href="#">Chăm sóc cá nhân</a></li>
+                                          <li><a href="#">Dành cho Nam giới</a></li>
+                                          <li><a href="#">Nước hoa</a></li>
+                                          <li><a href="#">Thực phẩm chức năng</a></li>
+                                          <li><a href="#">Thực phẩm cho sắc đẹp</a></li>
+                                          <li><a href="#">Sức khỏe tình dục</a></li>
+                                          <li><a href="#">Thiết bị y tế</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class='sub-sub-menu relative-G'><a href="#"><i class="fa fa-chevron-right right-G" aria-hidden="true"></i>Ô tô, xe máy & Thiết bị định vị</a>
+                                      <ul>
+                                        <li><a href="#">Điện thoại di động</a></li>
+                                        <li><a href="#">Máy tính bảng</a></li>
+                                        <li><a href="#">Laptop</a></li>
+                                        <li><a href="#">Máy tính để bàn</a></li>
+                                        <li><a href="#">Âm thanh</a></li>
+                                        <li><a href="#">Camera giám sát</a></li>
+                                        <li><a href="#">Máy ảnh kỹ thuật số</a></li>
+                                        <li><a href="#">Máy quay phim & Máy quay</a></li>
+                                        <li><a href="#">Màn hình vi tính</a></li>
+                                        <li><a href="#">Máy in</a></li>
+                                        <li><a href="#">Đồng hồ thông minh</a></li>
+                                        <li><a href="#">Máy chơi game</a></li>
+                                      </ul>
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                          </div>
+                      </div>
+                      
+                  </div>
+                </div>
+              </div>
+                 
+            </nav>
+            <main>
+                 <div class="bg-pink">
+                <div class="container">
+                  <div class="row">
+                    <a href="" class="bg-pink__banner">
+                      <img src="images/sale-banner.png" alt="">
+                    </a>
+                    <div class="voucher-more">
+                      <div class="row">
+                          <div class="col-lg-3 col-sm-3 col-xs-3 center">
+                              <div class="voucher-more__bx">
+                                  <a href="" class="voucher-more__bx__lm-icon">
+                                    <img src="images/lm-icon.png" alt="">
+                                  </a>
+                                  <a href="" class="voucher-more__bx__title">LazMall</a>
+                              </div>
+                            </div>
+                          <div class="col-lg-3 col-sm-3 col-xs-3 center">
+                              <div class="voucher-more__bx--hover-yellow">
+                                  <a href="" class="voucher-more__bx__lm-icon">
+                                    <img src="images/voucher-icon.png" alt="">
+                                  </a>
+                                  <a href="" class="voucher-more__bx__title">Voucher</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-sm-3 col-xs-3 center">
+                            <div class="voucher-more__bx--hover-blue">
+                                <a href="" class="voucher-more__bx__lm-icon">
+                                  <img src="images/top-up-icon.png" alt="">
+                                </a>
+                                <a href="" class="voucher-more__bx__title">Top Up & eCoupon</a>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-sm-3 col-xs-3 center">
+                            <div class="voucher-more__bx--hover-violet">
+                                <a href="" class="voucher-more__bx__lm-icon">
+                                  <img src="images/global.png" alt="">
+                                </a>
+                                <a href="" class="voucher-more__bx--title">LazGlobal</a>
+                            </div>
+                          </div>
+                     </div>
+                    </div>
+                    <div class="flash-sale">
+                        <p class="flash-sale__title" id="flash">
+                            Flash Sale
+                        </p>
+                        <div class="flash-sale__contain">
+                            <div class="flash-sale__contain--row1">
+                                <a href="#" class="flash-sale__contain--row1--on-sale-now">
+                                  On Sale Now
+                                </a>
+                                <div href="" class="flash-sale__contain--row1--countdown">
+                                    <div class="container-1">
+                                      <h4>Ending in</h4>
+                                    </div>
+                                    <p id="demo"></p>
+                                    <p id="two-dot">:</p>
+                                    <p id="demo1"></p>
+                                    <p id="two-dot">:</p>
+                                    <p id="demo2"></p>
+                                    <p id="two-dot">:</p>
+                                    <p id="demo3"></p>
+                                </div>
+                                <p class="flash-sale__contain--row1--shop-all-product">
+                                  Shop all products
+                                </p>
+                            </div>
+                            <div class="bx-f2-6">
+                                <div class="bx-f2 ">
+                                    <a href="">
+                                      <img src="images/tv-android.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                    </a>
+                                    <a href="" class="title-f2">
+                                      [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                    </a>
+                                    <a href="" class="new-cost-f2">
+                                        1,000 đ
+                                    </a>
+                                    <a href="" class="old-cost-f2">
+                                      10,890,000 đ 
+                                    </a>
+                                    <a href="" class="discount-f2">
+                                      -99%
+                                    </a>
+                                </div>
+                                <div class="bx-f2 ">
+                                  <a href="">
+                                    <img src="images/tv-android.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                  </a>
+                                  <a href="" class="title-f2">
+                                    [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                  </a>
+                                  <a href="" class="new-cost-f2">
+                                      1,000 đ
+                                  </a>
+                                  <a href="" class="old-cost-f2">
+                                    10,890,000 đ 
+                                  </a>
+                                  <a href="" class="discount-f2">
+                                    -99%
+                                  </a>
+                                 </div>
+                                 <div class="bx-f2 ">
+                                  <a href="">
+                                    <img src="images/tv-android.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                  </a>
+                                  <a href="" class="title-f2">
+                                    [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                  </a>
+                                  <a href="" class="new-cost-f2">
+                                      1,000 đ
+                                  </a>
+                                  <a href="" class="old-cost-f2">
+                                    10,890,000 đ 
+                                  </a>
+                                  <a href="" class="discount-f2">
+                                    -99%
+                                  </a>
+                                 </div>
+                                 <div class="bx-f2 ">
+                                  <a href="">
+                                    <img src="images/tv-android.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                  </a>
+                                  <a href="" class="title-f2">
+                                    [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                  </a>
+                                  <a href="" class="new-cost-f2">
+                                      1,000 đ
+                                  </a>
+                                  <a href="" class="old-cost-f2">
+                                    10,890,000 đ 
+                                  </a>
+                                  <a href="" class="discount-f2">
+                                    -99%
+                                  </a>
+                                </div>
+                                <div class="bx-f2 ">
+                                  <a href="">
+                                    <img src="images/tv-android.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                  </a>
+                                  <a href="" class="title-f2">
+                                    [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                  </a>
+                                  <a href="" class="new-cost-f2">
+                                      1,000 đ
+                                  </a>
+                                  <a href="" class="old-cost-f2">
+                                    10,890,000 đ 
+                                  </a>
+                                  <a href="" class="discount-f2">
+                                    -99%
+                                  </a>
+                                </div>
+                                <div class="bx-f2 ">
+                                  <a href="">
+                                    <img src="images/tv-android.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                  </a>
+                                  <a href="" class="title-f2">
+                                    [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                  </a>
+                                  <a href="" class="new-cost-f2">
+                                      1,000 đ
+                                  </a>
+                                  <a href="" class="old-cost-f2">
+                                    10,890,000 đ 
+                                  </a>
+                                  <a href="" class="discount-f2">
+                                    -99%
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="bx-f2-6-respon-max-992">
+                                  <div class="row-1-992">
+                                        <div class="bx-f2 ">
+                                          <a href="">
+                                            <img src="images/tv-android.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                          </a>
+                                          <a href="" class="title-f2">
+                                            [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                          </a>
+                                          <a href="" class="new-cost-f2">
+                                              1,000 đ
+                                          </a>
+                                          <a href="" class="old-cost-f2">
+                                            10,890,000 đ 
+                                          </a>
+                                          <a href="" class="discount-f2">
+                                            -99%
+                                          </a>
+                                      </div>
+                                      <div class="bx-f2 ">
+                                        <a href="">
+                                          <img src="images/tv-android.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                        </a>
+                                        <a href="" class="title-f2">
+                                          [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                        </a>
+                                        <a href="" class="new-cost-f2">
+                                            1,000 đ
+                                        </a>
+                                        <a href="" class="old-cost-f2">
+                                          10,890,000 đ 
+                                        </a>
+                                        <a href="" class="discount-f2">
+                                          -99%
+                                        </a>
+                                      </div>
+                                      <div class="bx-f2 ">
+                                        <a href="">
+                                          <img src="images/tv-android.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                        </a>
+                                        <a href="" class="title-f2">
+                                          [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                        </a>
+                                        <a href="" class="new-cost-f2">
+                                            1,000 đ
+                                        </a>
+                                        <a href="" class="old-cost-f2">
+                                          10,890,000 đ 
+                                        </a>
+                                        <a href="" class="discount-f2">
+                                          -99%
+                                        </a>
+                                      </div>
+                                  </div>
+                                  <div class="row-1-992">
+                                      <div class="bx-f2 ">
+                                        <a href="">
+                                          <img src="images/tv-android.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                        </a>
+                                        <a href="" class="title-f2">
+                                          [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                        </a>
+                                        <a href="" class="new-cost-f2">
+                                            1,000 đ
+                                        </a>
+                                        <a href="" class="old-cost-f2">
+                                          10,890,000 đ 
+                                        </a>
+                                        <a href="" class="discount-f2">
+                                          -99%
+                                        </a>
+                                      </div>
+                                      <div class="bx-f2 ">
+                                        <a href="">
+                                          <img src="images/tv-android.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                        </a>
+                                        <a href="" class="title-f2">
+                                          [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                        </a>
+                                        <a href="" class="new-cost-f2">
+                                            1,000 đ
+                                        </a>
+                                        <a href="" class="old-cost-f2">
+                                          10,890,000 đ 
+                                        </a>
+                                        <a href="" class="discount-f2">
+                                          -99%
+                                        </a>
+                                      </div>
+                                      <div class="bx-f2 ">
+                                        <a href="">
+                                          <img src="images/tv-android.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                        </a>
+                                        <a href="" class="title-f2">
+                                          [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                        </a>
+                                        <a href="" class="new-cost-f2">
+                                            1,000 đ
+                                        </a>
+                                        <a href="" class="old-cost-f2">
+                                          10,890,000 đ 
+                                        </a>
+                                        <a href="" class="discount-f2">
+                                          -99%
+                                        </a>
+                                      </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                 </div>
+                 <div class="siteCenter">
+                      <div class="most-popular" id="most">
+                        <a class="title">
+                            Most Popular
+                        </a>
+                        <div class="contain">
+                            <a href="" class="battery">
+                                <img src="images/pin.jpg" title="battery" alt="battery">
+                            </a>
+                            <div class="col2">
+                                <a href="" class="battery">
+                                  <img src="images/vay-dam-nu.jpg" title="váy đầm nữ" alt="váy đầm nữ">
+                                </a>
+                                <a href="" class="battery">
+                                  <img src="images/may-say-toc.jpg" title="váy đầm nữ" alt="váy đầm nữ">
+                                </a>
+                            </div>
+                            <div class="col2">
+                              <a href="" class="battery">
+                                <img src="images/non-ket-nam.jpg" title="váy đầm nữ" alt="váy đầm nữ">
+                              </a>
+                              <a href="" class="battery">
+                                <img src="images/camera-mini.jpg" title="váy đầm nữ" alt="váy đầm nữ">
+                              </a>
+                            </div>
+                            <div class="col2">
+                              <a href="" class="battery">
+                                <img src="images/phone.jpg" title="Phone" alt="váy đầm nữ">
+                              </a>
+                              <a href="" class="battery">
+                                <img src="images/ao-thun-nu.jpg" title="váy đầm nữ" alt="váy đầm nữ">
+                              </a>
+                            </div>
+                            <div class="col3">
+                              <a href="" class="battery">
+                                <img src="images/keo.jpg" title="Phone" alt="váy đầm nữ">
+                              </a>
+                              <a href="" class="battery">
+                                <img src="images/may-choi-game.jpg" title="váy đầm nữ" alt="váy đầm nữ">
+                              </a>
+                            </div>
+                        </div>
+                      </div>
+                 </div>
+                 
+                <div class="bg-opalescent">
+                <div class="collections">
+                      <div class="container">
+                        <div class="row">
+                            <div class="title-row">
+                                <p class="title">
+                                    Collections
+                                </p>
+                                <a href="" class="shop-more">
+                                  Shop-more<i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                          <div class="contain-collec">
+                              <div class="bx-collec">
+                                  <a class="title-bx-collec">
+                                      Hot offer for women >
+                                  </a>
+                                  <a href="" class="amount">
+                                      14.211 products
+                                  </a>
+                                  <div class="img-products">
+                                      <a href="" class="img-small">
+                                          <img src="images/dress-manocanh.jpg" alt="">
+                                      </a>
+                                      <a href="" class="img-small">
+                                        <img src="images/sandals.jpg" alt="">
+                                      </a>
+                                      <a href="" class="img-small">
+                                      <img src="images/cleaning-stuff.jpg" alt="">
+                                    </a>
+                                  </div>
+                              </div>
+                              <div class="bx-collec">
+                                <a class="title-bx-collec">
+                                    Hot offer for women >
+                                </a>
+                                <a href="" class="amount">
+                                    14.211 products
+                                </a>
+                                <div class="img-products">
+                                    <a href="" class="img-small">
+                                        <img src="images/dress-manocanh.jpg" alt="">
+                                    </a>
+                                    <a href="" class="img-small">
+                                      <img src="images/sandals.jpg" alt="">
+                                    </a>
+                                    <a href="" class="img-small">
+                                    <img src="images/cleaning-stuff.jpg" alt="">
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="bx-collec">
+                                <a class="title-bx-collec">
+                                    Hot offer for women >
+                                </a>
+                                <a href="" class="amount">
+                                    14.211 products
+                                </a>
+                                <div class="img-products">
+                                    <a href="" class="img-small">
+                                        <img src="images/dress-manocanh.jpg" alt="">
+                                    </a>
+                                    <a href="" class="img-small">
+                                      <img src="images/sandals.jpg" alt="">
+                                    </a>
+                                    <a href="" class="img-small">
+                                    <img src="images/cleaning-stuff.jpg" alt="">
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="bx-collec">
+                                <a class="title-bx-collec">
+                                    Hot offer for women >
+                                </a>
+                                <a href="" class="amount">
+                                    14.211 products
+                                </a>
+                                <div class="img-products">
+                                    <a href="" class="img-small">
+                                        <img src="images/dress-manocanh.jpg" alt="">
+                                    </a>
+                                    <a href="" class="img-small">
+                                      <img src="images/sandals.jpg" alt="">
+                                    </a>
+                                    <a href="" class="img-small">
+                                    <img src="images/cleaning-stuff.jpg" alt="">
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="bx-collec">
+                                <a class="title-bx-collec">
+                                    Hot offer for women >
+                                </a>
+                                <a href="" class="amount">
+                                    14.211 products
+                                </a>
+                                <div class="img-products">
+                                    <a href="" class="img-small">
+                                        <img src="images/dress-manocanh.jpg" alt="">
+                                    </a>
+                                    <a href="" class="img-small">
+                                      <img src="images/sandals.jpg" alt="">
+                                    </a>
+                                    <a href="" class="img-small">
+                                    <img src="images/cleaning-stuff.jpg" alt="">
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="bx-collec">
+                                <a class="title-bx-collec">
+                                    Hot offer for women >
+                                </a>
+                                <a href="" class="amount">
+                                    14.211 products
+                                </a>
+                                <div class="img-products">
+                                    <a href="" class="img-small">
+                                        <img src="images/dress-manocanh.jpg" alt="">
+                                    </a>
+                                    <a href="" class="img-small">
+                                      <img src="images/sandals.jpg" alt="">
+                                    </a>
+                                    <a href="" class="img-small">
+                                    <img src="images/cleaning-stuff.jpg" alt="">
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="bx-collec">
+                                <a class="title-bx-collec">
+                                    Hot offer for women >
+                                </a>
+                                <a href="" class="amount">
+                                    14.211 products
+                                </a>
+                                <div class="img-products">
+                                    <a href="" class="img-small">
+                                        <img src="images/dress-manocanh.jpg" alt="">
+                                    </a>
+                                    <a href="" class="img-small">
+                                      <img src="images/sandals.jpg" alt="">
+                                    </a>
+                                    <a href="" class="img-small">
+                                    <img src="images/cleaning-stuff.jpg" alt="">
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="bx-collec">
+                                <a class="title-bx-collec">
+                                    Hot offer for women >
+                                </a>
+                                <a href="" class="amount">
+                                    14.211 products
+                                </a>
+                                <div class="img-products">
+                                    <a href="" class="img-small">
+                                        <img src="images/dress-manocanh.jpg" alt="">
+                                    </a>
+                                    <a href="" class="img-small">
+                                      <img src="images/sandals.jpg" alt="">
+                                    </a>
+                                    <a href="" class="img-small">
+                                    <img src="images/cleaning-stuff.jpg" alt="">
+                                  </a>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="lazmall" id="lazmall">
+                    <div class="container">
+                        <div class="row">
+                            <div class="title-row">
+                                <p class="title">
+                                  LazMall
+                                </p>
+                                <a href="" class="shop-more">
+                                  Shop-more<i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="laz-contain">
+                                <div class="padding-0">
+                                    <div class="laz-bx">
+                                        <a href="" class="img-laz">
+                                            <img src="images/tai-nghe.jpg" alt="">
+                                        </a>
+                                        <div class="laz-center">
+                                            <a href="" class="lg-qcy">
+                                                <img src="images/lg-qcy.jpg" alt="">
+                                            </a>
+                                            <a href="" class="laz-title">
+                                                QCY Flagship Store
+                                            </a>
+                                            <a href="" class="laz-sapo">
+                                                QCY Flagship Store
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="padding-0">
+                                  <div class="laz-bx">
+                                      <a href="" class="img-laz">
+                                          <img src="images/fan.jpg" alt="">
+                                      </a>
+                                      <div class="laz-center">
+                                          <a href="" class="lg-qcy">
+                                              <img src="images/lg-qcy.jpg" alt="">
+                                          </a>
+                                          <a href="" class="laz-title">
+                                              QCY Flagship Store
+                                          </a>
+                                          <a href="" class="laz-sapo">
+                                              QCY Flagship Store
+                                          </a>
+                                      </div>
+                                  </div>
+                                </div>
+                                <div class="padding-0">
+                                  <div class="laz-bx">
+                                      <a href="" class="img-laz">
+                                          <img src="images/folding-chair.jpg" alt="">
+                                      </a>
+                                      <div class="laz-center">
+                                          <a href="" class="lg-qcy">
+                                              <img src="images/lg-qcy.jpg" alt="">
+                                          </a>
+                                          <a href="" class="laz-title">
+                                              QCY Flagship Store
+                                          </a>
+                                          <a href="" class="laz-sapo">
+                                              QCY Flagship Store
+                                          </a>
+                                      </div>
+                                  </div>
+                                </div>
+                                <div class="padding-0">
+                                  <div class="laz-bx">
+                                      <a href="" class="img-laz">
+                                          <img src="images/tai-nghe.jpg" alt="">
+                                      </a>
+                                      <div class="laz-center">
+                                          <a href="" class="lg-qcy">
+                                              <img src="images/lg-qcy.jpg" alt="">
+                                          </a>
+                                          <a href="" class="laz-title">
+                                              QCY Flagship Store
+                                          </a>
+                                          <a href="" class="laz-sapo">
+                                              QCY Flagship Store
+                                          </a>
+                                      </div>
+                                  </div>
+                                </div>
+                                <div class="padding-0">
+                                  <div class="laz-bx">
+                                      <a href="" class="img-laz">
+                                          <img src="images/fan.jpg" alt="">
+                                      </a>
+                                      <div class="laz-center">
+                                          <a href="" class="lg-qcy">
+                                              <img src="images/lg-qcy.jpg" alt="">
+                                          </a>
+                                          <a href="" class="laz-title">
+                                              QCY Flagship Store
+                                          </a>
+                                          <a href="" class="laz-sapo">
+                                              QCY Flagship Store
+                                          </a>
+                                      </div>
+                                  </div>
+                                </div>
+                                <div class="padding-0">
+                                  <div class="laz-bx">
+                                      <a href="" class="img-laz">
+                                          <img src="images/folding-chair.jpg" alt="">
+                                      </a>
+                                      <div class="laz-center">
+                                          <a href="" class="lg-qcy">
+                                              <img src="images/lg-qcy.jpg" alt="">
+                                          </a>
+                                          <a href="" class="laz-title">
+                                              QCY Flagship Store
+                                          </a>
+                                          <a href="" class="laz-sapo">
+                                              QCY Flagship Store
+                                          </a>
+                                      </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Categories" id="categories">
+                  <div class="container">
+                      <div class="row">
+                          <div class="row-1-cate">
+                              <div class="title-row">
+                                  <p class="title">
+                                    Categories
+                                  </p>
+                                  <a href="" class="shop-more">
+                                    Shop-more<i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                  </a>
+                              </div>
+                              <div class="sp-1">
+                                  <a href="">
+                                      <img src="images/men-t-shirt.jpg" alt="">
+                                  </a>
+                              </div>
+                              <div class="sp-1">
+                                <a href="">
+                                    <img src="images/women-tshirt.jpg" alt="">
+                                </a>
+                              </div>
+                              <div class="sp-1">
+                                <a href="">
+                                    <img src="images/men-sneaker.jpg" alt="">
+                                </a>
+                              </div>
+                              <div class="sp-1">
+                                <a href="">
+                                    <img src="images/mobile.jpg" alt="">
+                                </a>
+                              </div>
+                              <div class="sp-1">
+                                <a href="">
+                                    <img src="images/wireless.jpg" alt="">
+                                </a>
+                              </div>
+                              <div class="sp-1">
+                                <a href="">
+                                    <img src="images/women-dress.jpg" alt="">
+                                </a>
+                              </div>
+                              <div class="sp-1">
+                                <a href="">
+                                    <img src="images/other-top.jpg" alt="">
+                                </a>
+                              </div>
+                              <div class="sp-1">
+                                <a href="">
+                                    <img src="images/serum.jpg" alt="">
+                                </a>
+                              </div>
+                          </div>
+                          <div class="row-1-cate">
+                              <div class="sp-1">
+                                  <a href="">
+                                      <img src="images/cross.jpg" alt="">
+                                  </a>
+                              </div>
+                              <div class="sp-1">
+                                <a href="">
+                                    <img src="images/backpack.jpg" alt="">
+                                </a>
+                              </div>
+                              <div class="sp-1">
+                                <a href="">
+                                    <img src="images/facial.jpg" alt="">
+                                </a>
+                              </div>
+                              <div class="sp-1">
+                                <a href="">
+                                    <img src="images/in-ear.jpg" alt="">
+                                </a>
+                              </div>
+                              <div class="sp-1">
+                                <a href="">
+                                    <img src="images/men-t-shirt.jpg" alt="">
+                                </a>
+                              </div>
+                              <div class="sp-1">
+                              <a href="">
+                                  <img src="images/cables.jpg" alt="">
+                              </a>
+                              </div>
+                              <div class="sp-1">
+                                <a href="">
+                                    <img src="images/cases.jpg" alt="">
+                                </a>
+                              </div>
+                              <div class="sp-1">
+                                <a href="">
+                                    <img src="images/running-shoes.jpg" alt="">
+                                </a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="just-for-you" id="just">
+                    <div class="container">
+                      <div class="row">
+                          <div class="title-row">
+                              <p class="title">
+                                Just-for-you
+                              </p>
+                              <a href="" class="shop-more">
+                                Shop-more<i class="fa fa-chevron-right" aria-hidden="true"></i>
+                              </a>
+                          </div>
+                          <div class="contain-just">
+                              <div class="bx-f2-6">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                            <div class="row">
+                                              <div class="bx-f2">
+                                                  <a href="">
+                                                    <img src="images/tv-android.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                  </a>
+                                                  <a href="" class="title-f2">
+                                                    [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                  </a>
+                                                  <a href="" class="new-cost-f2">
+                                                      1,000 đ
+                                                  </a>
+                                                  <a href="" class="old-cost-f2">
+                                                    10,890,000 đ 
+                                                  </a>
+                                                  <a href="" class="discount-f2">
+                                                    -99%
+                                                  </a>
+                                                  <!-- data-rate-value là mặc định vote thôi, chả có mọe gì vd:data-rate-value=2 -->
+                                                  <div class="rate" ></div>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/chip.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                                <div class="rate" ></div>
+                                            </div>
+                                          </div>
+                                        </div>  
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/cosmetic.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                                <div class="rate" ></div>
+                                            </div>
+                                          </div>
+                                        </div> 
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/vegetable.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                                <div class="rate" ></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/oppo.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                                <div class="rate" ></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/effervescent.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                                <div class="rate" ></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="bx-f2-6">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                            <div class="row">
+                                              <div class="bx-f2">
+                                                  <a href="">
+                                                    <img src="images/tv-android.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                  </a>
+                                                  <a href="" class="title-f2">
+                                                    [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                  </a>
+                                                  <a href="" class="new-cost-f2">
+                                                      1,000 đ
+                                                  </a>
+                                                  <a href="" class="old-cost-f2">
+                                                    10,890,000 đ 
+                                                  </a>
+                                                  <a href="" class="discount-f2">
+                                                    -99%
+                                                  </a>
+                                                  <div class="rate" ></div>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/chip.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                                <div class="rate" ></div>
+                                            </div>
+                                          </div>
+                                        </div>  
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/cosmetic.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                                <div class="rate" ></div>
+                                            </div>
+                                          </div>
+                                        </div> 
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/vegetable.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/oppo.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/effervescent.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="bx-f2-6-readmore">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                            <div class="row">
+                                              <div class="bx-f2">
+                                                  <a href="">
+                                                    <img src="images/tv-android.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                  </a>
+                                                  <a href="" class="title-f2">
+                                                    [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                  </a>
+                                                  <a href="" class="new-cost-f2">
+                                                      1,000 đ
+                                                  </a>
+                                                  <a href="" class="old-cost-f2">
+                                                    10,890,000 đ 
+                                                  </a>
+                                                  <a href="" class="discount-f2">
+                                                    -99%
+                                                  </a>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/chip.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>  
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/cosmetic.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div> 
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/vegetable.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/oppo.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/effervescent.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="bx-f2-6-readmore">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                            <div class="row">
+                                              <div class="bx-f2">
+                                                  <a href="">
+                                                    <img src="images/tv-android.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                  </a>
+                                                  <a href="" class="title-f2">
+                                                    [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                  </a>
+                                                  <a href="" class="new-cost-f2">
+                                                      1,000 đ
+                                                  </a>
+                                                  <a href="" class="old-cost-f2">
+                                                    10,890,000 đ 
+                                                  </a>
+                                                  <a href="" class="discount-f2">
+                                                    -99%
+                                                  </a>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/chip.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>  
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/cosmetic.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div> 
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/vegetable.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/oppo.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/effervescent.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="bx-f2-6-readmore">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                            <div class="row">
+                                              <div class="bx-f2">
+                                                  <a href="">
+                                                    <img src="images/tv-android.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                  </a>
+                                                  <a href="" class="title-f2">
+                                                    [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                  </a>
+                                                  <a href="" class="new-cost-f2">
+                                                      1,000 đ
+                                                  </a>
+                                                  <a href="" class="old-cost-f2">
+                                                    10,890,000 đ 
+                                                  </a>
+                                                  <a href="" class="discount-f2">
+                                                    -99%
+                                                  </a>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/chip.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>  
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/cosmetic.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div> 
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/vegetable.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/oppo.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/effervescent.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="bx-f2-6-readmore">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                            <div class="row">
+                                              <div class="bx-f2">
+                                                  <a href="">
+                                                    <img src="images/tv-android.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                  </a>
+                                                  <a href="" class="title-f2">
+                                                    [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                  </a>
+                                                  <a href="" class="new-cost-f2">
+                                                      1,000 đ
+                                                  </a>
+                                                  <a href="" class="old-cost-f2">
+                                                    10,890,000 đ 
+                                                  </a>
+                                                  <a href="" class="discount-f2">
+                                                    -99%
+                                                  </a>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/chip.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>  
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/cosmetic.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div> 
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/vegetable.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/oppo.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/effervescent.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                                
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="bx-f2-6-readmore">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                            <div class="row">
+                                              <div class="bx-f2">
+                                                  <a href="">
+                                                    <img src="images/tv-android.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                  </a>
+                                                  <a href="" class="title-f2">
+                                                    [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                  </a>
+                                                  <a href="" class="new-cost-f2">
+                                                      1,000 đ
+                                                  </a>
+                                                  <a href="" class="old-cost-f2">
+                                                    10,890,000 đ 
+                                                  </a>
+                                                  <a href="" class="discount-f2">
+                                                    -99%
+                                                  </a>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/chip.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>  
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/cosmetic.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div> 
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/vegetable.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/oppo.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/effervescent.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="bx-f2-6-readmore">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                            <div class="row">
+                                              <div class="bx-f2">
+                                                  <a href="">
+                                                    <img src="images/tv-android.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                  </a>
+                                                  <a href="" class="title-f2">
+                                                    [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                  </a>
+                                                  <a href="" class="new-cost-f2">
+                                                      1,000 đ
+                                                  </a>
+                                                  <a href="" class="old-cost-f2">
+                                                    10,890,000 đ 
+                                                  </a>
+                                                  <a href="" class="discount-f2">
+                                                    -99%
+                                                  </a>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/chip.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>  
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/cosmetic.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div> 
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/vegetable.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/oppo.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/effervescent.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="bx-f2-6-readmore">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                            <div class="row">
+                                              <div class="bx-f2">
+                                                  <a href="">
+                                                    <img src="images/tv-android.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                  </a>
+                                                  <a href="" class="title-f2">
+                                                    [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                  </a>
+                                                  <a href="" class="new-cost-f2">
+                                                      1,000 đ
+                                                  </a>
+                                                  <a href="" class="old-cost-f2">
+                                                    10,890,000 đ 
+                                                  </a>
+                                                  <a href="" class="discount-f2">
+                                                    -99%
+                                                  </a>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/chip.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>  
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/cosmetic.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div> 
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/vegetable.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/oppo.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/effervescent.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="bx-f2-6-readmore">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                            <div class="row">
+                                              <div class="bx-f2">
+                                                  <a href="">
+                                                    <img src="images/tv-android.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                  </a>
+                                                  <a href="" class="title-f2">
+                                                    [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                  </a>
+                                                  <a href="" class="new-cost-f2">
+                                                      1,000 đ
+                                                  </a>
+                                                  <a href="" class="old-cost-f2">
+                                                    10,890,000 đ 
+                                                  </a>
+                                                  <a href="" class="discount-f2">
+                                                    -99%
+                                                  </a>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/chip.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>  
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/cosmetic.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div> 
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/vegetable.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/oppo.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                          <div class="row">
+                                            <div class="bx-f2">
+                                                <a href="">
+                                                  <img src="images/effervescent.jpg" title="tivi android thế hệ mới" alt="tivi android thế hệ mới">
+                                                </a>
+                                                <a href="" class="title-f2">
+                                                  [Game 1k kỳ diệu - Mở bán ngày 10/9/2020 - Chỉ hỗ trợ trên ]
+                                                </a>
+                                                <a href="" class="new-cost-f2">
+                                                    1,000 đ
+                                                </a>
+                                                <a href="" class="old-cost-f2">
+                                                  10,890,000 đ 
+                                                </a>
+                                                <a href="" class="discount-f2">
+                                                  -99%
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="loadmore">
+                                <a href="#" id="loadMore">Load More</a>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="voucher-near-footer">
+                      <div class="container">
+                          <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs4 voucher-near-bx">
+                                      <a href="" class="voucher-near-bx">
+                                        <img src="images/voucher.png" alt="">
+                                      </a>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs4 voucher-near-bx">
+                                    <a href="" class="voucher-near-bx">
+                                      <img src="images/voucher.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs4 voucher-near-bx">
+                                    <a href="" class="voucher-near-bx">
+                                      <img src="images/voucher.png" alt="">
+                                    </a>
+                                </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </main>
+            <footer>
+                    <div class="container">
+                          <div class="footer-contain">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                      <a href="" class="contact-title">
+                                        CONTACT US
+                                      </a>
+                                      <a href="" class="contact-link">
+                                        Mon - Sun: 9am - 6pm(Hotline), 7am-10pm (Online chat)
+                                      </a>
+                                      <a href="" class="contact-link">
+                                        Help Center
+                                      </a>
+                                      <a href="" class="contact-link">
+                                        How to Buy
+                                      </a>
+                                      <a href="" class="contact-link">
+                                        Shipping & Delivery
+                                      </a>
+                                      <a href="" class="contact-link">
+                                        International Product Policy
+                                      </a>
+                                      <a href="" class="contact-link">
+                                        How to Return
+                                      </a>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                      <a href="" class="contact-title">
+                                        LADADA VIETNAM
+                                      </a>
+                                      <a href="" class="contact-link">
+                                        Mon - Sun: 9am - 6pm(Hotline), 7am-10pm (Online chat)
+                                      </a>
+                                      <a href="" class="contact-link">
+                                        Help Center
+                                      </a>
+                                      <a href="" class="contact-link">
+                                        How to Buy
+                                      </a>
+                                      <a href="" class="contact-link">
+                                        Shipping & Delivery
+                                      </a>
+                                      <a href="" class="contact-link">
+                                        International Product Policy
+                                      </a>
+                                      <a href="" class="contact-link">
+                                        How to Return
+                                      </a>
+                                      <a href="" class="contact-link">
+                                        Shipping & Delivery
+                                      </a>
+                                      <a href="" class="contact-link">
+                                        International Product Policy
+                                      </a>
+                                      <a href="" class="contact-link">
+                                        How to Return
+                                      </a>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                  <img class="float-left" src="images/laz-lg-footer.png" alt="">
+                                  <div class="right-text">
+                                      <p class="text-orange font-size">Go where your heart beats</p>
+                                      <p class="float-left">Download the App</p>
+                                  </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                  <img src="images/app-store.png" alt="">
+                                </div>
+                          </div>
+                          <div class="payment">
+                            <img src="images/payment.jpg" alt="">
+                          </div>
+                    </div>
+                    <div class="container-fluid bg-footer">
+                          <div class="container">
+                            <img src="images/bg-footer.jpg" alt="">
+                          </div>
+                    </div>
+            </footer>
+        </div>
+        <p class="totop"> 
+            <a href="#top" class="totop-bx">
+                <i class="fa fa-chevron-up" aria-hidden="true"></i>
+            </a> 
+            <a href="#flash" class="totop-bx">
+               <i class="fa fa-free-code-camp" aria-hidden="true"></i>
+            </a> 
+            <a href="#most" class="totop-bx">
+               <i class="fa fa-clock-o" aria-hidden="true"></i>
+            </a> 
+            <a href="#lazmall" class="totop-bx">
+               <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            </a> 
+            <a href="#categories" class="totop-bx">
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a> 
+            <a href="#just" class="totop-bx">
+                <i class="fa fa-user" aria-hidden="true"></i>
+            </a>
+        </p>
+    </body>
+</html>
