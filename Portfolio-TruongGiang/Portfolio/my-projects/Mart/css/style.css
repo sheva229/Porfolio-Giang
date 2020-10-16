@@ -380,11 +380,11 @@ nav {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08); }
     nav .hot-deal .bx-prev {
       position: absolute;
-      top: 13px;
+      top: 0px;
       right: 40px;
-      width: 25px;
+      width: 30px;
       line-height: 30px;
-      height: 25px;
+      height: 30px;
       border-radius: 3px;
       color: white;
       background: url(../images/left-mini.png) 5px center no-repeat gray;
@@ -487,11 +487,13 @@ nav {
         color: black;
         font-size: 13px;
         margin-top: 10px;
-        float: left; }
+        float: left;
+        margin-left: 10px; }
       nav .hot-deal .hot-deal-banner .hot-deal__sp .hot-deal__sp--price {
         width: 100%;
         float: left;
-        margin-top: 7px; }
+        margin-top: 7px;
+        margin-left: 10px; }
         nav .hot-deal .hot-deal-banner .hot-deal__sp .hot-deal__sp--price new {
           float: left;
           font-weight: bold;
@@ -508,7 +510,8 @@ nav {
         width: 100%;
         margin-top: 5px;
         text-align: left;
-        color: #ffcd00; }
+        color: #ffcd00;
+        margin-left: 10px; }
       nav .hot-deal .hot-deal-banner .hot-deal__sp .hot-deal__sp--sale {
         position: absolute;
         top: 28px;
@@ -520,6 +523,16 @@ nav {
         line-height: 20px;
         color: white;
         font-size: 11px; }
+      nav .hot-deal .hot-deal-banner .hot-deal__sp .hot-deal__sp__sale {
+        position: absolute;
+        top: 0px;
+        background: red;
+        left: 0;
+        color: white;
+        width: 49px;
+        height: 24px;
+        padding-top: 2px;
+        border-radius: 5px; }
       nav .hot-deal .hot-deal-banner .hot-deal__sp .hot-deal__sp--count-down {
         width: 100%;
         position: absolute;
@@ -613,10 +626,14 @@ section {
   float: right;
   width: 73%; }
   section .category {
-    margin-top: 50px; }
+    margin-top: 50px;
+    float: left;
+    border: 1px solid #f1f1f1;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08); }
     section .category h3 {
       float: left;
-      font-weight: bold; }
+      font-weight: bold;
+      margin-left: 15px; }
     section .category .nav-tabs {
       float: left;
       margin-top: 15px;
@@ -639,6 +656,121 @@ section {
       width: 100%;
       margin-top: 10px;
       border-top: 1px solid #e6e6e6; }
+      section .category .tab-content .category-product {
+        position: relative;
+        float: left; }
+        section .category .tab-content .category-product:hover .hot-deal__sp--add-cart {
+          transition: 1.5s;
+          opacity: 1;
+          top: 25%; }
+        section .category .tab-content .category-product .hot-deal__sp--add-cart {
+          opacity: 0;
+          position: absolute;
+          width: 100%;
+          top: 30%;
+          height: 45px;
+          left: 0;
+          text-align: center; }
+          section .category .tab-content .category-product .hot-deal__sp--add-cart i.fa.fa-shopping-cart {
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            background: #10ab10;
+            color: white;
+            border-radius: 50%;
+            line-height: 40px;
+            font-size: 18px;
+            margin: 0 5px;
+            position: relative; }
+            section .category .tab-content .category-product .hot-deal__sp--add-cart i.fa.fa-shopping-cart:hover {
+              background: #353835;
+              transition: 0.6s; }
+            section .category .tab-content .category-product .hot-deal__sp--add-cart i.fa.fa-shopping-cart:hover .add-cart__note-cart {
+              display: block; }
+            section .category .tab-content .category-product .hot-deal__sp--add-cart i.fa.fa-shopping-cart .add-cart__note-cart {
+              position: absolute;
+              width: 87px;
+              height: 29px;
+              background: url(../images/add-to-cart.png) 5px center no-repeat;
+              color: white;
+              left: -24px;
+              font-size: 10px;
+              display: none; }
+          section .category .tab-content .category-product .hot-deal__sp--add-cart i.fa.fa-sticky-note-o {
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            background: #10ab10;
+            color: white;
+            border-radius: 50%;
+            line-height: 40px;
+            font-size: 18px;
+            margin: 0 5px;
+            position: relative; }
+            section .category .tab-content .category-product .hot-deal__sp--add-cart i.fa.fa-sticky-note-o:hover {
+              background: #353835;
+              transition: 0.6s; }
+            section .category .tab-content .category-product .hot-deal__sp--add-cart i.fa.fa-sticky-note-o:hover .add-cart__note-page {
+              display: block; }
+            section .category .tab-content .category-product .hot-deal__sp--add-cart i.fa.fa-sticky-note-o .add-cart__note-page {
+              position: absolute;
+              width: 87px;
+              height: 29px;
+              background: url(../images/go-to-page.png) 5px center no-repeat;
+              color: white;
+              top: -31px;
+              left: -24px;
+              font-size: 10px;
+              display: none; }
+        section .category .tab-content .category-product .cart {
+          float: left;
+          width: 49px;
+          border: 1px solid #ccc;
+          text-align: center;
+          margin-left: 20px;
+          height: 29px;
+          font-size: 20px;
+          color: black; }
+          section .category .tab-content .category-product .cart:hover {
+            background: #50aa1b;
+            color: white;
+            transition: 0.6s; }
+        section .category .tab-content .category-product .content-img {
+          float: left; }
+          section .category .tab-content .category-product .content-img img {
+            border: 1px solid #efefef; }
+        section .category .tab-content .category-product .content__title {
+          color: black;
+          font-size: 15px;
+          margin-top: 14px;
+          float: left;
+          width: 100%; }
+          section .category .tab-content .category-product .content__title:hover {
+            color: #48a112;
+            transition: 0.5s; }
+        section .category .tab-content .category-product price {
+          float: left;
+          width: 100%;
+          font-weight: bold;
+          margin: 5px 0; }
+        section .category .tab-content .category-product .star {
+          width: 100%;
+          float: left;
+          color: #ffe31e; }
+        section .category .tab-content .category-product .amount {
+          float: left;
+          margin-bottom: 30px; }
+          section .category .tab-content .category-product .amount input[type="number"] {
+            width: 40px;
+            border: 1px solid #c7c7c7;
+            outline: 0;
+            margin-left: 10px;
+            padding-left: 5px;
+            height: 29px;
+            padding-right: 5px; }
+          section .category .tab-content .category-product .amount input[type=number]::-webkit-inner-spin-button,
+          section .category .tab-content .category-product .amount input[type=number]::-webkit-outer-spin-button {
+            opacity: 1; }
   section .bxslider {
     float: left; }
     section .bxslider .bxslider-slide {
